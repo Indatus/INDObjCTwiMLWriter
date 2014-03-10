@@ -24,11 +24,15 @@
 
 - (NSString*)xmlString
 {
+    NSMutableDictionary* dict = [NSMutableDictionary new];
+    if (_url) {
+        dict[@"url"] = _url;
+    }
+
+    dict[@"method"] = [self methodString];
+
     return [self xmlStringForTag:self.tagName
-                  withAttributes:@{
-                      @"url" : _url,
-                      @"method" : [self methodString]
-                  }
+                  withAttributes:dict
                         andValue:self.value];
 }
 
