@@ -8,7 +8,14 @@
 
 #import "INDTwiMLSayElement.h"
 
+static NSString* const kLoopsKeyPath = @"loops";
+static NSString* const kLanguageKeyPath = @"language";
+static NSString* const kVoiceKeyPath = @"voice";
+
 @implementation INDTwiMLSayElement
+@synthesize loops = _loops;
+@synthesize language = _language;
+@synthesize voice = _voice;
 
 - (instancetype)initWithTagName:(NSString*)tagName andValue:(NSString*)value
 {
@@ -35,7 +42,6 @@
 }
 
 #pragma mark - Private
-
 - (NSString*)voiceString
 {
     switch (_voice) {
