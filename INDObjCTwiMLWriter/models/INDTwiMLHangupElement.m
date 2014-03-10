@@ -10,4 +10,15 @@
 
 @implementation INDTwiMLHangupElement
 
+- (instancetype)initWithTagName:(NSString*)tagName
+{
+    return [super initWithTagName:tagName];
+}
+
+- (NSString*)xmlString
+{
+    return [self xmlStringForTag:self.tagName
+                  withAttributes:nil];
+}
+
 @end
