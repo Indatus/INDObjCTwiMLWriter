@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0CD9359018CE2FAF00B34375 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD9358F18CE2FAF00B34375 /* Foundation.framework */; };
+		0CD9359518CE2FAF00B34375 /* INDObjCTwiMLWriter.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0CD9359418CE2FAF00B34375 /* INDObjCTwiMLWriter.h */; };
+		0CD9359718CE2FAF00B34375 /* INDObjCTwiMLWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD9359618CE2FAF00B34375 /* INDObjCTwiMLWriter.m */; };
+		0CD9359E18CE2FAF00B34375 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD9359D18CE2FAF00B34375 /* XCTest.framework */; };
+		0CD9359F18CE2FAF00B34375 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD9358F18CE2FAF00B34375 /* Foundation.framework */; };
+		0CD935A118CE2FAF00B34375 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD935A018CE2FAF00B34375 /* UIKit.framework */; };
+		0CD935A418CE2FAF00B34375 /* libINDObjCTwiMLWriter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD9358C18CE2FAF00B34375 /* libINDObjCTwiMLWriter.a */; };
+		0CD935AA18CE2FAF00B34375 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0CD935A818CE2FAF00B34375 /* InfoPlist.strings */; };
+		0CD935AC18CE2FAF00B34375 /* INDObjCTwiMLWriterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD935AB18CE2FAF00B34375 /* INDObjCTwiMLWriterTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0CD935A218CE2FAF00B34375 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0CD9358418CE2FAF00B34375 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0CD9358B18CE2FAF00B34375;
+			remoteInfo = INDObjCTwiMLWriter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0CD9358A18CE2FAF00B34375 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				0CD9359518CE2FAF00B34375 /* INDObjCTwiMLWriter.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0CD9358C18CE2FAF00B34375 /* libINDObjCTwiMLWriter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libINDObjCTwiMLWriter.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CD9358F18CE2FAF00B34375 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0CD9359318CE2FAF00B34375 /* INDObjCTwiMLWriter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "INDObjCTwiMLWriter-Prefix.pch"; sourceTree = "<group>"; };
+		0CD9359418CE2FAF00B34375 /* INDObjCTwiMLWriter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = INDObjCTwiMLWriter.h; sourceTree = "<group>"; };
+		0CD9359618CE2FAF00B34375 /* INDObjCTwiMLWriter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = INDObjCTwiMLWriter.m; sourceTree = "<group>"; };
+		0CD9359C18CE2FAF00B34375 /* INDObjCTwiMLWriterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = INDObjCTwiMLWriterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CD9359D18CE2FAF00B34375 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		0CD935A018CE2FAF00B34375 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		0CD935A718CE2FAF00B34375 /* INDObjCTwiMLWriterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "INDObjCTwiMLWriterTests-Info.plist"; sourceTree = "<group>"; };
+		0CD935A918CE2FAF00B34375 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0CD935AB18CE2FAF00B34375 /* INDObjCTwiMLWriterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = INDObjCTwiMLWriterTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0CD9358918CE2FAF00B34375 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CD9359018CE2FAF00B34375 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0CD9359918CE2FAF00B34375 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CD935A418CE2FAF00B34375 /* libINDObjCTwiMLWriter.a in Frameworks */,
+				0CD9359E18CE2FAF00B34375 /* XCTest.framework in Frameworks */,
+				0CD935A118CE2FAF00B34375 /* UIKit.framework in Frameworks */,
+				0CD9359F18CE2FAF00B34375 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0CD9358318CE2FAF00B34375 = {
+			isa = PBXGroup;
+			children = (
+				0CD9359118CE2FAF00B34375 /* INDObjCTwiMLWriter */,
+				0CD935A518CE2FAF00B34375 /* INDObjCTwiMLWriterTests */,
+				0CD9358E18CE2FAF00B34375 /* Frameworks */,
+				0CD9358D18CE2FAF00B34375 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0CD9358D18CE2FAF00B34375 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0CD9358C18CE2FAF00B34375 /* libINDObjCTwiMLWriter.a */,
+				0CD9359C18CE2FAF00B34375 /* INDObjCTwiMLWriterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0CD9358E18CE2FAF00B34375 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0CD9358F18CE2FAF00B34375 /* Foundation.framework */,
+				0CD9359D18CE2FAF00B34375 /* XCTest.framework */,
+				0CD935A018CE2FAF00B34375 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0CD9359118CE2FAF00B34375 /* INDObjCTwiMLWriter */ = {
+			isa = PBXGroup;
+			children = (
+				0CD9359418CE2FAF00B34375 /* INDObjCTwiMLWriter.h */,
+				0CD9359618CE2FAF00B34375 /* INDObjCTwiMLWriter.m */,
+				0CD9359218CE2FAF00B34375 /* Supporting Files */,
+			);
+			path = INDObjCTwiMLWriter;
+			sourceTree = "<group>";
+		};
+		0CD9359218CE2FAF00B34375 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0CD9359318CE2FAF00B34375 /* INDObjCTwiMLWriter-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0CD935A518CE2FAF00B34375 /* INDObjCTwiMLWriterTests */ = {
+			isa = PBXGroup;
+			children = (
+				0CD935AB18CE2FAF00B34375 /* INDObjCTwiMLWriterTests.m */,
+				0CD935A618CE2FAF00B34375 /* Supporting Files */,
+			);
+			path = INDObjCTwiMLWriterTests;
+			sourceTree = "<group>";
+		};
+		0CD935A618CE2FAF00B34375 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0CD935A718CE2FAF00B34375 /* INDObjCTwiMLWriterTests-Info.plist */,
+				0CD935A818CE2FAF00B34375 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0CD9358B18CE2FAF00B34375 /* INDObjCTwiMLWriter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0CD935AF18CE2FAF00B34375 /* Build configuration list for PBXNativeTarget "INDObjCTwiMLWriter" */;
+			buildPhases = (
+				0CD9358818CE2FAF00B34375 /* Sources */,
+				0CD9358918CE2FAF00B34375 /* Frameworks */,
+				0CD9358A18CE2FAF00B34375 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = INDObjCTwiMLWriter;
+			productName = INDObjCTwiMLWriter;
+			productReference = 0CD9358C18CE2FAF00B34375 /* libINDObjCTwiMLWriter.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		0CD9359B18CE2FAF00B34375 /* INDObjCTwiMLWriterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0CD935B218CE2FAF00B34375 /* Build configuration list for PBXNativeTarget "INDObjCTwiMLWriterTests" */;
+			buildPhases = (
+				0CD9359818CE2FAF00B34375 /* Sources */,
+				0CD9359918CE2FAF00B34375 /* Frameworks */,
+				0CD9359A18CE2FAF00B34375 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0CD935A318CE2FAF00B34375 /* PBXTargetDependency */,
+			);
+			name = INDObjCTwiMLWriterTests;
+			productName = INDObjCTwiMLWriterTests;
+			productReference = 0CD9359C18CE2FAF00B34375 /* INDObjCTwiMLWriterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0CD9358418CE2FAF00B34375 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Indatus;
+			};
+			buildConfigurationList = 0CD9358718CE2FAF00B34375 /* Build configuration list for PBXProject "INDObjCTwiMLWriter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0CD9358318CE2FAF00B34375;
+			productRefGroup = 0CD9358D18CE2FAF00B34375 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0CD9358B18CE2FAF00B34375 /* INDObjCTwiMLWriter */,
+				0CD9359B18CE2FAF00B34375 /* INDObjCTwiMLWriterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0CD9359A18CE2FAF00B34375 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CD935AA18CE2FAF00B34375 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0CD9358818CE2FAF00B34375 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CD9359718CE2FAF00B34375 /* INDObjCTwiMLWriter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0CD9359818CE2FAF00B34375 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CD935AC18CE2FAF00B34375 /* INDObjCTwiMLWriterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0CD935A318CE2FAF00B34375 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0CD9358B18CE2FAF00B34375 /* INDObjCTwiMLWriter */;
+			targetProxy = 0CD935A218CE2FAF00B34375 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0CD935A818CE2FAF00B34375 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0CD935A918CE2FAF00B34375 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0CD935AD18CE2FAF00B34375 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0CD935AE18CE2FAF00B34375 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0CD935B018CE2FAF00B34375 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/INDObjCTwiMLWriter.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "INDObjCTwiMLWriter/INDObjCTwiMLWriter-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		0CD935B118CE2FAF00B34375 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/INDObjCTwiMLWriter.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "INDObjCTwiMLWriter/INDObjCTwiMLWriter-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		0CD935B318CE2FAF00B34375 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "INDObjCTwiMLWriter/INDObjCTwiMLWriter-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "INDObjCTwiMLWriterTests/INDObjCTwiMLWriterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		0CD935B418CE2FAF00B34375 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "INDObjCTwiMLWriter/INDObjCTwiMLWriter-Prefix.pch";
+				INFOPLIST_FILE = "INDObjCTwiMLWriterTests/INDObjCTwiMLWriterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0CD9358718CE2FAF00B34375 /* Build configuration list for PBXProject "INDObjCTwiMLWriter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0CD935AD18CE2FAF00B34375 /* Debug */,
+				0CD935AE18CE2FAF00B34375 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0CD935AF18CE2FAF00B34375 /* Build configuration list for PBXNativeTarget "INDObjCTwiMLWriter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0CD935B018CE2FAF00B34375 /* Debug */,
+				0CD935B118CE2FAF00B34375 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0CD935B218CE2FAF00B34375 /* Build configuration list for PBXNativeTarget "INDObjCTwiMLWriterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0CD935B318CE2FAF00B34375 /* Debug */,
+				0CD935B418CE2FAF00B34375 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0CD9358418CE2FAF00B34375 /* Project object */;
+}
