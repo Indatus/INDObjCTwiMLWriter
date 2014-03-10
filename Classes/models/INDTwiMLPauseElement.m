@@ -25,7 +25,7 @@
 {
     return [self xmlStringForTag:self.tagName
                   withAttributes:@{
-                      @"length" : [NSString stringWithFormat:@"%d", (int)_pauseLength]
+                      @"length" : [NSString stringWithFormat:@"%lud", (unsigned long)_pauseLength]
                   }
                         andValue:self.value];
 }

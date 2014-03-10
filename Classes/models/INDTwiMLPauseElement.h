@@ -9,6 +9,6 @@
 
 @interface INDTwiMLPauseElement : INDTwiMLElement
 
-@property (nonatomic) NSInteger pauseLength;
+@property (nonatomic) NSUInteger pauseLength;
 
 @end
