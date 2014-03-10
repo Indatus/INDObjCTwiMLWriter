@@ -72,9 +72,85 @@
     case TwiMLSayLanguageItalian:
         return @"it";
         break;
+    case TwiMLSayLanguageDanishDenmark:
+        return @"da-DK";
+        break;
+    case TwiMLSayLanguageGermanGermany:
+        return @"de-DE";
+        break;
+    case TwiMLSayLanguageEnglishAustralia:
+        return @"en-AU";
+        break;
+    case TwiMLSayLanguageEnglishCanada:
+        return @"en-CA";
+        break;
+    case TwiMLSayLanguageEnglishUK:
+        return @"en-GB";
+        break;
+    case TwiMLSayLanguageEnglishIndia:
+        return @"en-IN";
+        break;
+    case TwiMLSayLanguageEnglishUnitedStates:
+        return @"en-US";
+        break;
+    case TwiMLSayLanguageCatalanSpain:
+        return @"ca-ES";
+        break;
+    case TwiMLSayLanguageSpanishSpain:
+        return @"es-ES";
+        break;
+    case TwiMLSayLanguageSpanishMexico:
+        return @"es-MX";
+        break;
+    case TwiMLSayLanguageFinnishFinland:
+        return @"fi-FI";
+        break;
+    case TwiMLSayLanguageFrenchCanada:
+        return @"fr-CA";
+        break;
+    case TwiMLSayLanguageFrenchFrance:
+        return @"fr-FR";
+        break;
+    case TwiMLSayLanguageItalianItaly:
+        return @"it-IT";
+        break;
+    case TwiMLSayLanguageJapaneseJapan:
+        return @"ja-JP";
+        break;
+    case TwiMLSayLanguageKoreanKorea:
+        return @"ko-KR";
+        break;
+    case TwiMLSayLanguageNorwegianNorway:
+        return @"nb-NO";
+        break;
+    case TwiMLSayLanguageDutchNetherlands:
+        return @"nl-NL";
+        break;
+    case TwiMLSayLanguagePolishPoland:
+        return @"pl-PL";
+        break;
+    case TwiMLSayLanguagePortugueseBrazil:
+        return @"pt-BR";
+        break;
+    case TwiMLSayLanguagePortuguesePortugal:
+        return @"pt-PT";
+        break;
+    case TwiMLSayLanguageRussianRussia:
+        return @"ru-RU";
+        break;
+    case TwiMLSayLanguageSwedishSweden:
+        return @"sv-SE";
+        break;
+    case TwiMLSayLanguageChineseMandarin:
+        return @"zh-CN";
+        break;
+    case TwiMLSayLanguageChineseCantonese:
+        return @"zh-HK";
+        break;
+    case TwiMLSayLanguageChineseTaiwaneseMandarin:
+        return @"zh-TW";
+        break;
     }
-
-    return nil;
 }
 
 @end

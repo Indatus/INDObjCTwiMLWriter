@@ -5,6 +5,16 @@
       location = "group:Classes"
       name = "Classes">
       <Group
+         location = "group:private"
+         name = "private">
+         <FileRef
+            location = "group:INDTwiMLElement.h">
+         </FileRef>
+         <FileRef
+            location = "group:INDTwiMLElement.m">
+         </FileRef>
+      </Group>
+      <Group
          location = "group:models"
          name = "models">
          <FileRef
@@ -72,16 +82,6 @@
          </FileRef>
          <FileRef
             location = "group:INDTwiMLSayElement.m">
-         </FileRef>
-      </Group>
-      <Group
-         location = "group:private"
-         name = "private">
-         <FileRef
-            location = "group:INDTwiMLElement.h">
-         </FileRef>
-         <FileRef
-            location = "group:INDTwiMLElement.m">
          </FileRef>
       </Group>
       <Group

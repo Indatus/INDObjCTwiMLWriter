@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TwimLElement.h"
+#import "INDTwiMLElement.h"
 
 typedef NS_ENUM(NSUInteger, TwiMLElementType) {
     TwiMLSayElement,

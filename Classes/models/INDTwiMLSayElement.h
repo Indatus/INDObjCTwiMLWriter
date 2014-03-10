@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Jeff Trespalacios. All rights reserved.
 //
 
-#import "TwiMLElement.h"
+#import "INDTwiMLElement.h"
 
 typedef NS_ENUM(NSInteger, TwiMLSayLanguage) {
     // Standard Languages can use either man or woman voice
