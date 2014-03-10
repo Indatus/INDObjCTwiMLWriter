@@ -1,8 +1,7 @@
 //
 //  INDTwiMLGatherElement.m
-//  Airbreak
 //
-//  Created by Jeff Trespalacios on 3/10/14.
+//  Created by Jeff Styles on 3/10/14.
 //  Copyright (c) 2014 Jeff Trespalacios. All rights reserved.
 //
 
@@ -10,4 +9,31 @@
 
 @implementation INDTwiMLGatherElement
 
+- (instancetype)initWithTagName:(NSString*)tagName
+{
+    self = [super initWithTagName:tagName];
+
+    if (self) {
+        _method = TwiMLHTTPMethodPOST;
+        _timeout = 5;
+        _finishOnKey = @"#";
+    }
+
+    return self;
+}
+
+- (NSString*)xmlString
+{
+    NSMutableDictionary* dict = [NSMutableDictionary new];
+    if (_action) {
+        dict[@"action"] = _action;
+    }
+
+    if (_numDigits) {
+        dict[@"numDigits"] = [NSString stringWithFormat:@"%lud", (unsigned long)_numDigits];
+    }
+
+    return [self xmlStringForTag:self.tagName
+                  withAttributes:dict];
+}
 @end
