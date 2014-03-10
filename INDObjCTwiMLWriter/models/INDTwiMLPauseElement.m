@@ -9,10 +9,9 @@
 
 @implementation INDTwiMLPauseElement
 
-- (instancetype)initWithTagName:(NSString*)tagName andValue:(NSString*)value
+- (instancetype)initWithTagName:(NSString*)tagName
 {
-    self = [super initWithTagName:tagName
-                         andValue:value];
+    self = [super initWithTagName:tagName];
 
     if (self) {
         _pauseLength = 1;
@@ -25,8 +24,7 @@
 {
     return [self xmlStringForTag:self.tagName
                   withAttributes:@{
-                      @"length" : [NSString stringWithFormat:@"%lud", (unsigned long)_pauseLength]
-                  }
-                        andValue:self.value];
+                                    @"length" : [NSString stringWithFormat:@"%lud", (unsigned long)_pauseLength]
+                                 }];
 }
 @end

@@ -11,11 +11,10 @@
 @interface INDTwiMLElement : NSObject
 
 @property (nonatomic, copy, readonly) NSString* tagName;
-@property (nonatomic, copy) NSString* value;
 
-- (instancetype)initWithTagName:(NSString*)tagName andValue:(NSString*)value;
+- (instancetype)initWithTagName:(NSString*)tagName;
 
 - (NSString*)xmlString;
-- (NSString*)xmlStringForTag:(NSString *)tag withAttributes:(NSDictionary *)attributes andValue:(NSString*)value;
+- (NSString*)xmlStringForTag:(NSString*)tag withAttributes:(NSDictionary*)attributes;
 
 @end

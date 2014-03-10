@@ -10,12 +10,11 @@
 
 @implementation INDTwiMLElement
 
-- (instancetype)initWithTagName:(NSString*)tagName andValue:(NSString*)value
+- (instancetype)initWithTagName:(NSString*)tagName
 {
     self = [super init];
     if (self) {
         _tagName = [tagName copy];
-        _value = [value copy];
     }
 
     return self;
@@ -26,7 +25,7 @@
     return nil;
 }
 
-- (NSString*)xmlStringForTag:(NSString*)tag withAttributes:(NSDictionary*)attributes andValue:(NSString*)value
+- (NSString*)xmlStringForTag:(NSString*)tag withAttributes:(NSDictionary*)attributes
 {
     NSMutableString* xmlString = [NSMutableString stringWithFormat:@"<%@", tag];
 
@@ -36,7 +35,7 @@
                             [xmlString appendFormat:@" %@='%@'", key, value];
                         }];
     }
-    [xmlString appendFormat:@">%@<%@/>", value, tag];
+    [xmlString appendString:@" />"];
 
     return [xmlString copy];
 }

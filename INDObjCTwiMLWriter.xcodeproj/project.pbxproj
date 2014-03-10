@@ -21,6 +21,7 @@
 		0C56C49518CE331A0040EB6C /* INDTwiMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C56C48418CE331A0040EB6C /* INDTwiMLElement.m */; };
 		0C56C49618CE331A0040EB6C /* INDTwiMLFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C56C48718CE331A0040EB6C /* INDTwiMLFactory.m */; };
 		0C56C49718CE331A0040EB6C /* INDTwiMLWritter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C56C48918CE331A0040EB6C /* INDTwiMLWritter.m */; };
+		0C5FBEE818CE394E00AD374C /* INDTwiMLElementWithValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5FBEE718CE394E00AD374C /* INDTwiMLElementWithValue.m */; };
 		0CD9359018CE2FAF00B34375 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD9358F18CE2FAF00B34375 /* Foundation.framework */; };
 		0CD9359E18CE2FAF00B34375 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD9359D18CE2FAF00B34375 /* XCTest.framework */; };
 		0CD9359F18CE2FAF00B34375 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD9358F18CE2FAF00B34375 /* Foundation.framework */; };
@@ -81,6 +82,8 @@
 		0C56C48718CE331A0040EB6C /* INDTwiMLFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INDTwiMLFactory.m; sourceTree = "<group>"; };
 		0C56C48818CE331A0040EB6C /* INDTwiMLWritter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INDTwiMLWritter.h; sourceTree = "<group>"; };
 		0C56C48918CE331A0040EB6C /* INDTwiMLWritter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INDTwiMLWritter.m; sourceTree = "<group>"; };
+		0C5FBEE618CE394E00AD374C /* INDTwiMLElementWithValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INDTwiMLElementWithValue.h; sourceTree = "<group>"; };
+		0C5FBEE718CE394E00AD374C /* INDTwiMLElementWithValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INDTwiMLElementWithValue.m; sourceTree = "<group>"; };
 		0CD9358C18CE2FAF00B34375 /* libINDObjCTwiMLWriter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libINDObjCTwiMLWriter.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CD9358F18CE2FAF00B34375 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0CD9359318CE2FAF00B34375 /* INDObjCTwiMLWriter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "INDObjCTwiMLWriter-Prefix.pch"; sourceTree = "<group>"; };
@@ -149,6 +152,8 @@
 			children = (
 				0C56C48318CE331A0040EB6C /* INDTwiMLElement.h */,
 				0C56C48418CE331A0040EB6C /* INDTwiMLElement.m */,
+				0C5FBEE618CE394E00AD374C /* INDTwiMLElementWithValue.h */,
+				0C5FBEE718CE394E00AD374C /* INDTwiMLElementWithValue.m */,
 			);
 			path = private;
 			sourceTree = "<group>";
@@ -320,6 +325,7 @@
 				0C56C49018CE331A0040EB6C /* INDTwiMLPlayElement.m in Sources */,
 				0C56C48E18CE331A0040EB6C /* INDTwiMLLeaveElement.m in Sources */,
 				0C56C49318CE331A0040EB6C /* INDTwiMLRejectElement.m in Sources */,
+				0C5FBEE818CE394E00AD374C /* INDTwiMLElementWithValue.m in Sources */,
 				0C56C48B18CE331A0040EB6C /* INDTwiMLEnqueueElement.m in Sources */,
 				0C56C49418CE331A0040EB6C /* INDTwiMLSayElement.m in Sources */,
 				0C56C49718CE331A0040EB6C /* INDTwiMLWritter.m in Sources */,

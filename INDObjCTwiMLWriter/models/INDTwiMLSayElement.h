@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Jeff Trespalacios. All rights reserved.
 //
 
-#import "INDTwiMLElement.h"
+#import "INDTwiMLElementWithValue.h"
 
 typedef NS_ENUM(NSInteger, TwiMLSayLanguage) {
     // Standard Languages can use either man or woman voice
@@ -51,7 +51,7 @@ typedef NS_ENUM(NSUInteger, TwiMLSayVoice) {
     TwiMLSayVoiceAlice
 };
 
-@interface INDTwiMLSayElement : INDTwiMLElement
+@interface INDTwiMLSayElement : INDTwiMLElementWithValue
 
 @property (nonatomic) NSUInteger loops;
 @property (nonatomic) TwiMLSayLanguage language;

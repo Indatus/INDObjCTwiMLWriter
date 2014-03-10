@@ -11,8 +11,7 @@
 
 - (instancetype)initWithTagName:(NSString*)tagName andValue:(NSString*)value
 {
-    self = [super initWithTagName:tagName
-                         andValue:value];
+    self = [super initWithTagName:tagName];
 
     if (self) {
         _reason = TwiMLRejectReasonRejected;
@@ -25,9 +24,8 @@
 {
     return [self xmlStringForTag:self.tagName
                   withAttributes:@{
-                      @"reason" : [self reasonString]
-                  }
-                        andValue:self.value];
+                                    @"reason" : [self reasonString]
+                                 }];
 }
 
 - (NSString*)reasonString

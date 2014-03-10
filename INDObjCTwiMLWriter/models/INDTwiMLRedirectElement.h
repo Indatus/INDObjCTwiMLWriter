@@ -6,14 +6,14 @@
 //  Copyright (c) 2014 Jeff Trespalacios. All rights reserved.
 //
 
-#import "INDTwiMLElement.h"
+#import "INDTwiMLElementWithValue.h"
 
 typedef NS_ENUM(NSInteger, TwiMLHTTPMethod) {
     TwiMLHTTPMethodPOST,
     TwiMLHTTPMethodGET
 };
 
-@interface INDTwiMLRedirectElement : INDTwiMLElement
+@interface INDTwiMLRedirectElement : INDTwiMLElementWithValue
 
 @property (nonatomic) TwiMLHTTPMethod method;
 
