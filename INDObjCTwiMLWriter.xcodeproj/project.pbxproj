@@ -29,6 +29,7 @@
 		0CD935A418CE2FAF00B34375 /* libINDObjCTwiMLWriter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD9358C18CE2FAF00B34375 /* libINDObjCTwiMLWriter.a */; };
 		0CD935AA18CE2FAF00B34375 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0CD935A818CE2FAF00B34375 /* InfoPlist.strings */; };
 		0CD935AC18CE2FAF00B34375 /* INDObjCTwiMLWriterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD935AB18CE2FAF00B34375 /* INDObjCTwiMLWriterTests.m */; };
+		37345A0818CE443000CE21A7 /* INDTwiMLSmsElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 37345A0718CE443000CE21A7 /* INDTwiMLSmsElement.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,8 @@
 		0CD935A718CE2FAF00B34375 /* INDObjCTwiMLWriterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "INDObjCTwiMLWriterTests-Info.plist"; sourceTree = "<group>"; };
 		0CD935A918CE2FAF00B34375 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0CD935AB18CE2FAF00B34375 /* INDObjCTwiMLWriterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = INDObjCTwiMLWriterTests.m; sourceTree = "<group>"; };
+		37345A0618CE443000CE21A7 /* INDTwiMLSmsElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INDTwiMLSmsElement.h; sourceTree = "<group>"; };
+		37345A0718CE443000CE21A7 /* INDTwiMLSmsElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INDTwiMLSmsElement.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +146,8 @@
 				0C56C47F18CE331A0040EB6C /* INDTwiMLRejectElement.m */,
 				0C56C48018CE331A0040EB6C /* INDTwiMLSayElement.h */,
 				0C56C48118CE331A0040EB6C /* INDTwiMLSayElement.m */,
+				37345A0618CE443000CE21A7 /* INDTwiMLSmsElement.h */,
+				37345A0718CE443000CE21A7 /* INDTwiMLSmsElement.m */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -320,6 +325,7 @@
 				0C56C48A18CE331A0040EB6C /* INDTwiMLDialElement.m in Sources */,
 				0C56C48F18CE331A0040EB6C /* INDTwiMLPauseElement.m in Sources */,
 				0C56C48C18CE331A0040EB6C /* INDTwiMLGatherElement.m in Sources */,
+				37345A0818CE443000CE21A7 /* INDTwiMLSmsElement.m in Sources */,
 				0C56C49618CE331A0040EB6C /* INDTwiMLFactory.m in Sources */,
 				0C56C49118CE331A0040EB6C /* INDTwiMLRecordElement.m in Sources */,
 				0C56C49018CE331A0040EB6C /* INDTwiMLPlayElement.m in Sources */,
