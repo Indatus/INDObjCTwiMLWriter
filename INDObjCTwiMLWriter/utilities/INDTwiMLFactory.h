@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "INDTwiMLElement.h"
 
-typedef NS_ENUM(NSUInteger, TwiMLElementType) {
+@class INDTwiMLElement;
+
+typedef NS_ENUM(NSUInteger, INDTwiMLElementType) {
     TwiMLSayElement,
     TwiMLPlayElement,
     TwiMLGatherElement,
@@ -25,6 +26,6 @@ typedef NS_ENUM(NSUInteger, TwiMLElementType) {
 
 @interface INDTwiMLFactory : NSObject
 
-+ (TwiMLElement*)generateElementOfClass:(TwiMLElementType)type;
++ (INDTwiMLElement*)generateElementOfClass:(INDTwiMLElementType)type;
 
 @end

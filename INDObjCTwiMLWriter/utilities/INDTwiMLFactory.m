@@ -7,12 +7,13 @@
 //
 
 #import "INDTwiMLFactory.h"
+#import "INDTwiMLElement.h"
 
 @implementation INDTwiMLFactory
 
-+ (TwiMLElement*)generateElementOfClass:(TwiMLElementType)type
++ (INDTwiMLElement*)generateElementOfClass:(INDTwiMLElementType)type
 {
-    TwiMLElement* element = nil;
+    INDTwiMLElement* element = nil;
     switch (type) {
     case TwiMLSayElement:
 
