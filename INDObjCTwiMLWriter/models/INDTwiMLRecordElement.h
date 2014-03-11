@@ -6,11 +6,7 @@
 //
 
 #import "INDTwiMLElement.h"
-
-typedef NS_ENUM(NSInteger, TwiMLHTTPMethod) {
-    TwiMLHTTPMethodPOST,
-    TwiMLHTTPMethodGET
-};
+#import "INDTwiMLConstants.h"
 
 @interface INDTwiMLRecordElement : INDTwiMLElement
 

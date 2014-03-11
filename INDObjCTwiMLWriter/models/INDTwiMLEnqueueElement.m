@@ -42,9 +42,6 @@
     case TwiMLHTTPMethodGET:
         return @"GET";
         break;
-    default:
-        return @"POST";
-        break;
     }
 }
 @end
