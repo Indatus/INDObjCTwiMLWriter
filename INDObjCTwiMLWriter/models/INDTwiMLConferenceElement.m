@@ -9,13 +9,13 @@
 #import "INDTwiMLConferenceElement.h"
 
 static NSString* const kTagName = @"Conference";
-static NSString* const kMUTEDKEY = @"muted";
-static NSString* const kBEEPKEY = @"beep";
-static NSString* const kSTARTCONFERENCEONENTERKEY = @"startConferenceOnEnter";
-static NSString* const kENDCONFERENCEONEXITKEY = @"endConferenceOnExit";
-static NSString* const kWAITURLKEY = @"waitUrl";
-static NSString* const kWAITMETHODKEY = @"waitMethod";
-static NSString* const kMAXPARTICIPANTSKEY = @"maxParticipants";
+static NSString* const kMutedKey = @"muted";
+static NSString* const kBeepKey = @"beep";
+static NSString* const kStartConferenceOnEntryKey = @"startConferenceOnEnter";
+static NSString* const kEndConferenceOnExitKey = @"endConferenceOnExit";
+static NSString* const kWaitUrlKey = @"waitUrl";
+static NSString* const kWaitMethodKey = @"waitMethod";
+static NSString* const kMaxParticipantsKey = @"maxParticipants";
 
 @implementation INDTwiMLConferenceElement
 
@@ -37,15 +37,15 @@ static NSString* const kMAXPARTICIPANTSKEY = @"maxParticipants";
 - (NSDictionary*)attributes
 {
     NSMutableDictionary* dict = [NSMutableDictionary new];
-    dict[kMUTEDKEY] = [self boolToString:_muted];
-    dict[kBEEPKEY] = [self beepString];
-    dict[kSTARTCONFERENCEONENTERKEY] = [self boolToString:_startConferenceOnEnter];
-    dict[kENDCONFERENCEONEXITKEY] = [self boolToString:_endConferenceOnExit];
+    dict[kMutedKey] = [self boolToString:_muted];
+    dict[kBeepKey] = [self beepString];
+    dict[kStartConferenceOnEntryKey] = [self boolToString:_startConferenceOnEnter];
+    dict[kEndConferenceOnExitKey] = [self boolToString:_endConferenceOnExit];
     if (_waitUrl) {
-        dict[kWAITURLKEY] = _waitUrl;
+        dict[kWaitUrlKey] = _waitUrl;
     }
-    dict[kWAITMETHODKEY] = [self methodString];
-    dict[kMAXPARTICIPANTSKEY] = [NSString stringWithFormat:@"%lud", (unsigned long)_maxParticipants];
+    dict[kWaitMethodKey] = [self methodString];
+    dict[kMaxParticipantsKey] = [NSString stringWithFormat:@"%lud", (unsigned long)_maxParticipants];
 
     return [dict copy];
 }

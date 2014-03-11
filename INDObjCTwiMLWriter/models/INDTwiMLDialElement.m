@@ -10,10 +10,10 @@
 static NSString* const kActionKey = @"action";
 static NSString* const kMethodKey = @"method";
 static NSString* const kTimeoutKey = @"timeout";
-static NSString* const kHANGUPONSTARKEY = @"hangUpOnStar";
-static NSString* const kTIMELIMITKEY = @"timeLimit";
-static NSString* const kCALLERIDKEY = @"callerId";
-static NSString* const kRECORDKEY = @"record";
+static NSString* const kHangUpOnStarKey = @"hangUpOnStar";
+static NSString* const kTimeLimitKey = @"timeLimit";
+static NSString* const kCallerIdKey = @"callerId";
+static NSString* const kRecordKey = @"record";
 static NSString* const kTagName = @"Dial";
 
 @implementation INDTwiMLDialElement
@@ -42,14 +42,14 @@ static NSString* const kTagName = @"Dial";
 
     dict[kMethodKey] = [self methodString];
     dict[kTimeoutKey] = [NSString stringWithFormat:@"%lud", (unsigned long)_timeout];
-    dict[kHANGUPONSTARKEY] = [self boolToString:_hangupOnStar];
-    dict[kTIMELIMITKEY] = [NSString stringWithFormat:@"%lud", (unsigned long)_timeLimit];
+    dict[kHangUpOnStarKey] = [self boolToString:_hangupOnStar];
+    dict[kTimeLimitKey] = [NSString stringWithFormat:@"%lud", (unsigned long)_timeLimit];
 
     if (_callerId) {
-        dict[kCALLERIDKEY] = _callerId;
+        dict[kCallerIdKey] = _callerId;
     }
 
-    dict[kRECORDKEY] = [self boolToString:_record];
+    dict[kRecordKey] = [self boolToString:_record];
 
     return [dict copy];
 }

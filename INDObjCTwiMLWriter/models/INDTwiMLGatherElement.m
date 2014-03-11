@@ -9,7 +9,7 @@
 
 static NSString* const kTagName = @"Gather";
 static NSString* const kActionKey = @"action";
-static NSString* const kNUMDIGITSKEY = @"numDigits";
+static NSString* const kNumDigitsKey = @"numDigits";
 
 @implementation INDTwiMLGatherElement
 
@@ -34,7 +34,7 @@ static NSString* const kNUMDIGITSKEY = @"numDigits";
     }
 
     if (_numDigits) {
-        dict[kNUMDIGITSKEY] = [NSString stringWithFormat:@"%lud", (unsigned long)_numDigits];
+        dict[kNumDigitsKey] = [NSString stringWithFormat:@"%lud", (unsigned long)_numDigits];
     }
 
     return [dict copy];

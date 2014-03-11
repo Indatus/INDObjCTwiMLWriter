@@ -8,7 +8,7 @@
 #import "INDTwiMLEnqueueElement.h"
 
 static NSString* const kTagName = @"Enqueue";
-static NSString * const kURLKEY = @"url";
+static NSString * const kUrlKey = @"url";
 static NSString * const kMethodKey = @"method";
 
 @implementation INDTwiMLEnqueueElement
@@ -28,7 +28,7 @@ static NSString * const kMethodKey = @"method";
 {
     NSMutableDictionary* dict = [NSMutableDictionary new];
     if (_url) {
-        dict[kURLKEY] = _url;
+        dict[kUrlKey] = _url;
     }
 
     dict[kMethodKey] = [self methodString];
