@@ -13,10 +13,4 @@
 {
     return [super initWithTagName:tagName];
 }
-
-- (NSDictionary*)attributes
-{
-    return nil;
-}
-
 @end
