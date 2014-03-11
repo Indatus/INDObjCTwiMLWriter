@@ -7,7 +7,7 @@
 
 #import "INDTwiMLPlayElement.h"
 
-const NSString* const kLOOPKEY = @"loop";
+const NSString* const kLoopKey = @"loop";
 const NSString* const kDIGITSKEY = @"digits";
 
 @implementation INDTwiMLPlayElement
@@ -28,7 +28,7 @@ static NSString* const kTagName = @"Play";
 - (NSDictionary*)attributes
 {
     NSMutableDictionary* dict = [NSMutableDictionary new];
-    dict[kLOOPKEY] = [NSString stringWithFormat:@"%lud", (unsigned long)_loop];
+    dict[kLoopKey] = [NSString stringWithFormat:@"%lud", (unsigned long)_loop];
     if (_digits) {
         dict[kDIGITSKEY] = _digits;
     }
