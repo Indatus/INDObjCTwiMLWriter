@@ -22,23 +22,26 @@
     return self;
 }
 
--(NSString *)xmlString
+- (NSDictionary*)attributes
 {
-    return [self xmlStringForTag:self.tagName withAttributes:@{@"method": [self methodString]} andValue:self.value];
+    NSMutableDictionary* dict = [NSMutableDictionary new];
+    dict[@"method"] = [self methodString];
+
+    return [dict copy];
 }
 
--(NSString *)methodString
+- (NSString*)methodString
 {
-    switch (_method){
-        case TwiMLHTTPMethodGET:
-            return @"GET";
-            break;
-        case TwiMLHTTPMethodPOST:
-            return @"POST";
-            break;
-        default:
-            return @"POST";
-            break;
+    switch (_method) {
+    case TwiMLHTTPMethodGET:
+        return @"GET";
+        break;
+    case TwiMLHTTPMethodPOST:
+        return @"POST";
+        break;
+    default:
+        return @"POST";
+        break;
     }
 }
 @end
