@@ -7,6 +7,9 @@
 
 #import "INDTwiMLEnqueueElement.h"
 
+static NSString * const kURLKEY = @"url";
+static NSString * const kMETHODKEY = @"method";
+
 @implementation INDTwiMLEnqueueElement
 
 - (instancetype)initWithTagName:(NSString*)tagName andValue:(NSString*)value
@@ -25,10 +28,10 @@
 {
     NSMutableDictionary* dict = [NSMutableDictionary new];
     if (_url) {
-        dict[@"url"] = _url;
+        dict[kURLKEY] = _url;
     }
 
-    dict[@"method"] = [self methodString];
+    dict[kMETHODKEY] = [self methodString];
 
     return [dict copy];
 }
@@ -41,9 +44,6 @@
         break;
     case TwiMLHTTPMethodGET:
         return @"GET";
-        break;
-    default:
-        return @"POST";
         break;
     }
 }
