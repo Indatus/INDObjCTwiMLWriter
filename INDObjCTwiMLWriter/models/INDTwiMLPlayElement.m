@@ -1,8 +1,7 @@
 //
 //  INDTwiMLPlayElement.m
-//  Airbreak
 //
-//  Created by Jeff Trespalacios on 3/10/14.
+//  Created by Jeff Styles on 3/10/14.
 //  Copyright (c) 2014 Jeff Trespalacios. All rights reserved.
 //
 
@@ -10,4 +9,26 @@
 
 @implementation INDTwiMLPlayElement
 
+- (instancetype)initWithTagName:(NSString*)tagName andValue:(NSString*)value
+{
+    self = [super initWithTagName:tagName
+                         andValue:value];
+
+    if (self) {
+        _loop = 1;
+    }
+
+    return self;
+}
+
+- (NSDictionary*)attributes
+{
+    NSMutableDictionary* dict = [NSMutableDictionary new];
+    dict[@"loop"] = [NSString stringWithFormat:@"%lud", (unsigned long)_loop];
+    if (_digits) {
+        dict[@"digits"] = _digits;
+    }
+
+    return [dict copy];
+}
 @end

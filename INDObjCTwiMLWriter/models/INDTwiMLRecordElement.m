@@ -25,7 +25,7 @@
     return self;
 }
 
-- (NSString*)xmlString
+- (NSDictionary*)attributes
 {
     NSMutableDictionary* dict = [NSMutableDictionary new];
     if (_action) {
@@ -44,8 +44,7 @@
 
     dict[@"playBeep"] = [self playBeepString];
 
-    return [self xmlStringForTag:self.tagName
-                  withAttributes:dict];
+    return [dict copy];
 }
 
 #pragma mark - Private

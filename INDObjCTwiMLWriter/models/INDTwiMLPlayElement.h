@@ -1,13 +1,14 @@
 //
 //  INDTwiMLPlayElement.h
-//  Airbreak
 //
-//  Created by Jeff Trespalacios on 3/10/14.
+//  Created by Jeff Styles on 3/10/14.
 //  Copyright (c) 2014 Jeff Trespalacios. All rights reserved.
 //
 
-#import "INDTwiMLElement.h"
+#import "INDTwiMLElementWithValue.h"
 
-@interface INDTwiMLPlayElement : INDTwiMLElement
+@interface INDTwiMLPlayElement : INDTwiMLElementWithValue
 
+@property (nonatomic) NSUInteger loop;
+@property (nonatomic) NSString* digits;
 @end

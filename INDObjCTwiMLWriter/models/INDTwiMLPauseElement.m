@@ -20,11 +20,11 @@
     return self;
 }
 
-- (NSString*)xmlString
+- (NSDictionary*)attributes
 {
-    return [self xmlStringForTag:self.tagName
-                  withAttributes:@{
-                                    @"length" : [NSString stringWithFormat:@"%lud", (unsigned long)_pauseLength]
-                                 }];
+    NSMutableDictionary* dict = [NSMutableDictionary new];
+    dict[@"length"] = [NSString stringWithFormat:@"%lud", (unsigned long)_pauseLength];
+
+    return [dict copy];
 }
 @end
