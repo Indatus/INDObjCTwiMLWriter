@@ -30,15 +30,14 @@ static NSString* const kVoiceKeyPath = @"voice";
     return self;
 }
 
-- (NSString*)xmlString
+- (NSDictionary *)attributes
 {
-    return [self xmlStringForTag:self.tagName
-                  withAttributes:@{
-                      @"voice" : [self voiceString],
-                      @"loop" : [NSString stringWithFormat:@"%lud", (unsigned long)_loops],
-                      @"language" : [self languageString]
-                  }
-                        andValue:self.value];
+    NSMutableDictionary *dict = [NSMutableDictionary new];
+    dict[@"voice"] = [self voiceString];
+    dict[@"loop"] = [NSString stringWithFormat:@"%lud", (unsigned long)_loops];
+    dict[@"language"] = [self languageString];
+    
+    return [dict copy];
 }
 
 #pragma mark - Private
