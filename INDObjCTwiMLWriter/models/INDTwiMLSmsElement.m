@@ -22,7 +22,7 @@
     return self;
 }
 
-- (NSString*)xmlString
+- (NSDictionary*)attributes
 {
     NSMutableDictionary* dict = [NSMutableDictionary new];
     if (_toPhoneNumber) {
@@ -45,9 +45,7 @@
         dict[@"statusCallback"] = _statusCallback;
     }
 
-    return [self xmlStringForTag:self.tagName
-                  withAttributes:dict
-                        andValue:self.value];
+    return [dict copy];
 }
 
 #pragma mark - Private
