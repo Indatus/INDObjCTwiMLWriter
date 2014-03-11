@@ -1,13 +1,24 @@
 //
 //  INDTwiMLDialElement.h
-//  Airbreak
 //
-//  Created by Jeff Trespalacios on 3/10/14.
+//  Created by Jeff Styles on 3/10/14.
 //  Copyright (c) 2014 Jeff Trespalacios. All rights reserved.
 //
 
-#import "INDTwiMLElement.h"
+#import "INDTwiMLElementWithValue.h"
 
-@interface INDTwiMLDialElement : INDTwiMLElement
+typedef NS_ENUM(NSInteger, TwiMLHTTPMethod) {
+    TwiMLHTTPMethodPOST,
+    TwiMLHTTPMethodGET
+};
 
+@interface INDTwiMLDialElement : INDTwiMLElementWithValue
+
+@property (nonatomic) NSString* action;
+@property (nonatomic) TwiMLHTTPMethod method;
+@property (nonatomic) NSUInteger timeout;
+@property (nonatomic) BOOL hangupOnStar;
+@property (nonatomic) NSUInteger timeLimit;
+@property (nonatomic) NSString* callerId;
+@property (nonatomic) BOOL record;
 @end
