@@ -20,12 +20,11 @@
     return self;
 }
 
-- (NSString*)xmlString
+- (NSDictionary*)attributes
 {
-    return [self xmlStringForTag:self.tagName
-                  withAttributes:@{
-                                    @"reason" : [self reasonString]
-                                 }];
+    return @{
+        @"reason" : [self reasonString]
+    };
 }
 
 - (NSString*)reasonString
