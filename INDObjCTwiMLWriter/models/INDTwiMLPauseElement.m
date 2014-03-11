@@ -6,8 +6,8 @@
 //
 
 #import "INDTwiMLPauseElement.h"
-
 static NSString* const kTagName = @"Pause";
+static NSString * const kLENGTHKEY = @"length";
 
 @implementation INDTwiMLPauseElement
 
@@ -25,7 +25,7 @@ static NSString* const kTagName = @"Pause";
 - (NSDictionary*)attributes
 {
     NSMutableDictionary* dict = [NSMutableDictionary new];
-    dict[@"length"] = [NSString stringWithFormat:@"%lud", (unsigned long)_pauseLength];
+    dict[kLENGTHKEY] = [NSString stringWithFormat:@"%lud", (unsigned long)_pauseLength];
 
     return [dict copy];
 }

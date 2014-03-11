@@ -15,10 +15,4 @@ static NSString* const kTagName = @"Hangup";
 {
     return [super initWithTagName:kTagName];
 }
-
-- (NSDictionary*)attributes
-{
-    return nil;
-}
-
 @end

@@ -8,6 +8,8 @@
 #import "INDTwiMLGatherElement.h"
 
 static NSString* const kTagName = @"Gather";
+static NSString* const kACTIONKEY = @"action";
+static NSString* const kNUMDIGITSKEY = @"numDigits";
 
 @implementation INDTwiMLGatherElement
 
@@ -28,11 +30,11 @@ static NSString* const kTagName = @"Gather";
 {
     NSMutableDictionary* dict = [NSMutableDictionary new];
     if (_action) {
-        dict[@"action"] = _action;
+        dict[kACTIONKEY] = _action;
     }
 
     if (_numDigits) {
-        dict[@"numDigits"] = [NSString stringWithFormat:@"%lud", (unsigned long)_numDigits];
+        dict[kNUMDIGITSKEY] = [NSString stringWithFormat:@"%lud", (unsigned long)_numDigits];
     }
 
     return [dict copy];

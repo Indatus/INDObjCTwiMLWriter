@@ -7,7 +7,13 @@
 
 #import "INDTwiMLRejectElement.h"
 
+
 static NSString* const kTagName = @"Reject";
+static NSString* const kREASONKEY = @"reason";
+
+static NSString* const kREASONREJECTED = @"rejected";
+static NSString* const kREASONBUSY = @"busy";
+
 
 @implementation INDTwiMLRejectElement
 
@@ -25,7 +31,7 @@ static NSString* const kTagName = @"Reject";
 - (NSDictionary*)attributes
 {
     return @{
-        @"reason" : [self reasonString]
+        kREASONKEY : [self reasonString]
     };
 }
 
@@ -33,13 +39,10 @@ static NSString* const kTagName = @"Reject";
 {
     switch (_reason) {
     case TwiMLRejectReasonBusy:
-        return @"busy";
+        return kREASONBUSY;
         break;
     case TwiMLRejectReasonRejected:
-        return @"rejected";
-    default:
-        return @"rejected";
-        break;
+        return kREASONREJECTED;
     }
 }
 

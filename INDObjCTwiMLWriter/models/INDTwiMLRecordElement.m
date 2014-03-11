@@ -7,6 +7,17 @@
 
 #import "INDTwiMLRecordElement.h"
 
+static NSString* const kACTIONKEY = @"action";
+static NSString* const kMETHODKEY = @"method";
+static NSString* const kTIMEOUTKEY = @"timeout";
+static NSString* const kFINISHONKEY = @"finishOnKey";
+static NSString* const kMAXLENGTHKEY = @"maxLength";
+static NSString* const kTRANSCRIBEKEY = @"transcribe";
+static NSString* const kTRANSCRIBECALLBACKKEY = @"transcribeCallback";
+static NSString* const kPLAYBEEPKEY = @"playBeep";
+
+static NSString* const kDEFAULTFINISHONKEYVALUE = @"123456789*#";
+
 @implementation INDTwiMLRecordElement
 
 static NSString* const kTagName = @"Record";
@@ -18,7 +29,7 @@ static NSString* const kTagName = @"Record";
     if (self) {
         _method = TwiMLHTTPMethodPOST;
         _timeout = 5;
-        _finishOnKey = @"123456789*#";
+        _finishOnKey = kDEFAULTFINISHONKEYVALUE;
         _maxLength = 3600;
         _transcribe = NO;
         _playBeep = YES;
@@ -31,20 +42,20 @@ static NSString* const kTagName = @"Record";
 {
     NSMutableDictionary* dict = [NSMutableDictionary new];
     if (_action) {
-        dict[@"action"] = _action;
+        dict[kACTIONKEY] = _action;
     }
 
-    dict[@"method"] = [self methodString];
-    dict[@"timeout"] = [NSString stringWithFormat:@"%lud", (unsigned long)_timeout];
-    dict[@"finishOnKey"] = _finishOnKey;
-    dict[@"maxLength"] = [NSString stringWithFormat:@"%lud", (unsigned long)_maxLength];
-    dict[@"transcribe"] = [self transcribeString];
+    dict[kMETHODKEY] = [self methodString];
+    dict[kTIMEOUTKEY] = [NSString stringWithFormat:@"%lud", (unsigned long)_timeout];
+    dict[kFINISHONKEY] = _finishOnKey;
+    dict[kMAXLENGTHKEY] = [NSString stringWithFormat:@"%lud", (unsigned long)_maxLength];
+    dict[kTRANSCRIBEKEY] = [self transcribeString];
 
     if (_transcribeCallback) {
-        dict[@"transcribeCallback"] = _transcribeCallback;
+        dict[kTRANSCRIBECALLBACKKEY] = _transcribeCallback;
     }
 
-    dict[@"playBeep"] = [self playBeepString];
+    dict[kPLAYBEEPKEY] = [self playBeepString];
 
     return [dict copy];
 }
