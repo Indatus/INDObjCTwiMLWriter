@@ -7,11 +7,7 @@
 //
 
 #import "INDTwiMLNestableElement.h"
-
-typedef NS_ENUM(NSInteger, TwiMLHTTPMethod) {
-    TwiMLHTTPMethodPOST,
-    TwiMLHTTPMethodGET
-};
+#import "INDTwiMLConstants.h"
 
 @interface INDTwiMLNestedDialElement : INDTwiMLNestableElement
 

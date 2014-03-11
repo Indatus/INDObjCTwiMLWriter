@@ -10,11 +10,11 @@
 
 @implementation INDTwiMLElementWithValue
 
-- (id)initWithTagName:(NSString*)tagName andValue:(NSString*)value
+- (id)initWithTagName:(NSString*)tagName
 {
     self = [super initWithTagName:tagName];
     if (self) {
-        _value = [value copy];
+        _value = nil;
     }
 
     return self;

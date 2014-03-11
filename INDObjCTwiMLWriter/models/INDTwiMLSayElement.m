@@ -8,6 +8,7 @@
 
 #import "INDTwiMLSayElement.h"
 
+static NSString* const kTagName = @"Say";
 static NSString* const kLoopsKeyPath = @"loops";
 static NSString* const kLanguageKeyPath = @"language";
 static NSString* const kVoiceKeyPath = @"voice";
@@ -17,10 +18,9 @@ static NSString* const kVoiceKeyPath = @"voice";
 @synthesize language = _language;
 @synthesize voice = _voice;
 
-- (instancetype)initWithTagName:(NSString*)tagName andValue:(NSString*)value
+- (instancetype)init
 {
-    self = [super initWithTagName:tagName
-                         andValue:value];
+    self = [super initWithTagName:kTagName];
     if (self) {
         _loops = 1;
         _voice = TwiMLSayVoiceMan;
@@ -30,13 +30,13 @@ static NSString* const kVoiceKeyPath = @"voice";
     return self;
 }
 
-- (NSDictionary *)attributes
+- (NSDictionary*)attributes
 {
-    NSMutableDictionary *dict = [NSMutableDictionary new];
+    NSMutableDictionary* dict = [NSMutableDictionary new];
     dict[@"voice"] = [self voiceString];
     dict[@"loop"] = [NSString stringWithFormat:@"%lud", (unsigned long)_loops];
     dict[@"language"] = [self languageString];
-    
+
     return [dict copy];
 }
 

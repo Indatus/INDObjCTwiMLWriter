@@ -8,48 +8,84 @@
 
 #import "INDTwiMLFactory.h"
 #import "INDTwiMLElement.h"
+#import "INDTwiMLClientElement.h"
+#import "INDTwiMLConferenceElement.h"
+#import "INDTwiMLDialElement.h"
+#import "INDTwiMLEnqueueElement.h"
+#import "INDTwiMLGatherElement.h"
+#import "INDTwiMLHangupElement.h"
+#import "INDTwiMLLeaveElement.h"
+#import "INDTwiMLNestedDialElement.h"
+#import "INDTwiMLNumberElement.h"
+#import "INDTwiMLPauseElement.h"
+#import "INDTwiMLPlayElement.h"
+#import "INDTwiMLQueueElement.h"
+#import "INDTwiMLRecordElement.h"
+#import "INDTwiMLRedirectElement.h"
+#import "INDTwiMLRejectElement.h"
+#import "INDTwiMLSayElement.h"
+#import "INDTwiMLSipElement.h"
+#import "INDTwiMLSmsElement.h"
 
 @implementation INDTwiMLFactory
 
 + (INDTwiMLElement*)generateElementOfClass:(INDTwiMLElementType)type
 {
-    INDTwiMLElement* element = nil;
+    INDTwiMLElement* element;
     switch (type) {
-    case INDTwiMLClienetElement:
+    case INDTwiMLClienetElementType:
+        element = [[INDTwiMLClientElement alloc] init];
         break;
-    case INDTwiMLConferenceElement:
+    case INDTwiMLConferenceElementType:
+        element = [[INDTwiMLConferenceElement alloc] init];
         break;
-    case INDTwiMLDialElement:
+    case INDTwiMLDialElementType:
+        element = [[INDTwiMLDialElement alloc] init];
         break;
-    case INDTwiMLEnqueueElement:
+    case INDTwiMLEnqueueElementType:
+        element = [[INDTwiMLEnqueueElement alloc] init];
         break;
-    case INDTwiMLGatherElement:
+    case INDTwiMLGatherElementType:
+        element = [[INDTwiMLGatherElement alloc] init];
         break;
-    case INDTwiMLHangupElement:
+    case INDTwiMLHangupElementType:
+        element = [[INDTwiMLHangupElement alloc] init];
         break;
-    case INDTwiMLLeaveElement:
+    case INDTwiMLLeaveElementType:
+        element = [[INDTwiMLLeaveElement alloc] init];
         break;
-    case INDTwiMLNestedDialElement:
+    case INDTwiMLNestedDialElementType:
+        element = [[INDTwiMLNestedDialElement alloc] init];
         break;
-    case INDTwiMLNumberElement:
+    case INDTwiMLNumberElementType:
+        element = [[INDTwiMLNumberElement alloc] init];
         break;
-    case INDTwiMLPauseElement:
+    case INDTwiMLPauseElementType:
+        element = [[INDTwiMLPauseElement alloc] init];
         break;
-    case INDTwiMLPlayElement:
+    case INDTwiMLPlayElementType:
+        element = [[INDTwiMLPlayElement alloc] init];
         break;
-    case INDTwiMLQueueElement:
+    case INDTwiMLQueueElementType:
+        element = [[INDTwiMLQueueElement alloc] init];
         break;
-    case INDTwiMLRecordElement:
+    case INDTwiMLRecordElementType:
+        element = [[INDTwiMLRecordElement alloc] init];
         break;
-    case INDTwiMLRedirectElement:
+    case INDTwiMLRedirectElementType:
+        element = [[INDTwiMLRedirectElement alloc] init];
         break;
-    case INDTwiMLRejectElement:
+    case INDTwiMLRejectElementType:
+        element = [[INDTwiMLRejectElement alloc] init];
         break;
-    case INDTwiMLSayElement:
+    case INDTwiMLSayElementType:
+        element = [[INDTwiMLSayElement alloc] init];
         break;
-    case INDTwiMLSipElement:
+    case INDTwiMLSipElementType:
+        element = [[INDTwiMLSipElement alloc] init];
         break;
-    case INDTwiMLSmsElement:
+    case INDTwiMLSmsElementType:
+        element = [[INDTwiMLSmsElement alloc] init];
         break;
     }
 

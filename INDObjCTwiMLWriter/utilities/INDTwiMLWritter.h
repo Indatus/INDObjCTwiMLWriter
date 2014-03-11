@@ -10,9 +10,7 @@
 
 @interface INDTwiMLWritter : NSObject
 
-+ (NSString*)xmlForKeys:(NSArray*)keys values:(NSArray*)values;
-+ (NSData*)xmlDataForKeys:(NSArray*)keys values:(NSArray*)values;
-
-+ (NSDictionary *)dictionaryForKey:(NSString *)key withData:(NSDictionary *)data andValue:(NSString *)value;
++ (NSData*)xmlDataElement:(NSArray*)elements usingEncoding:(NSStringEncoding)encoding;
++ (NSString*)xmlForElements:(NSArray*)elements;
 
 @end

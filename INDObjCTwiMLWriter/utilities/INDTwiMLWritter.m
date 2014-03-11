@@ -7,38 +7,27 @@
 //
 
 #import "INDTwiMLWritter.h"
+#import "INDTwiMLElement.h"
 
 static NSString* const kAttributeKey = @"kAttributeKey";
 static NSString* const kValueKey = @"kValueKey";
 
 @implementation INDTwiMLWritter
 
-+ (NSString*)xmlForKeys:(NSArray*)keys values:(NSArray*)values
++ (NSString*)xmlForElements:(NSArray*)elements
 {
-    if (keys.count != values.count) {
-        return nil;
-    }
 
     NSMutableString* xml = [self beginTwiMLDocument];
-    for (int i = 0; i < keys.count; i++) {
-        NSString* key = keys[i];
-        id value = values[i];
-
-        if ([value isKindOfClass:[NSString class]]) {
-            [self appendParam:value
-                       forKey:key
-                   toDocument:xml];
-        } else if ([value isKindOfClass:[NSDictionary class]]) {
-        }
+    for (INDTwiMLElement* element in elements) {
+        [xml appendString:[element xmlString]];
     }
 
     return [self endTwiMLDocument:xml];
 }
 
-+ (NSData*)xmlDataForKeys:(NSArray*)keys values:(NSArray*)values;
++ (NSData*)xmlDataElement:(NSArray*)elements usingEncoding:(NSStringEncoding)encoding
 {
-    return [[self xmlForKeys:keys
-                      values:values] dataUsingEncoding:NSUTF8StringEncoding];
+    return [[self xmlForElements:elements] dataUsingEncoding:encoding];
 }
 
 + (NSDictionary*)dictionaryForKey:(NSString*)key withData:(NSDictionary*)data andValue:(NSString*)value
@@ -62,14 +51,6 @@ static NSString* const kValueKey = @"kValueKey";
 + (void)appendParam:(NSString*)value forKey:(NSString*)key toDocument:(NSMutableString*)document
 {
     [document appendFormat:@"<%@>%@</%@>", key, value, key];
-}
-
-+ (void)appendKey:(NSString*)key withData:(NSDictionary*)data toDocument:(NSMutableString*)document
-{
-    NSString* value = data[kValueKey];
-    NSDictionary* attributes = data[kAttributeKey];
-    
-    
 }
 
 + (NSString*)endTwiMLDocument:(NSMutableString*)document

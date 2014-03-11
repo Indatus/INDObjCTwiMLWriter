@@ -8,6 +8,7 @@
 
 #import "INDTwiMLConferenceElement.h"
 
+static NSString* const kTagName = @"Conference";
 static NSString* const kMUTEDKEY = @"muted";
 static NSString* const kBEEPKEY = @"beep";
 static NSString* const kSTARTCONFERENCEONENTERKEY = @"startConferenceOnEnter";
@@ -18,11 +19,9 @@ static NSString* const kMAXPARTICIPANTSKEY = @"maxParticipants";
 
 @implementation INDTwiMLConferenceElement
 
-- (instancetype)initWithTagName:(NSString*)tagName andValue:(NSString*)value
+- (instancetype)init
 {
-    self = [super initWithTagName:tagName
-                         andValue:value];
-
+    self = [super initWithTagName:kTagName];
     if (self) {
         _muted = NO;
         _beep = TwiMLBeepOptionTrue;
@@ -54,14 +53,11 @@ static NSString* const kMAXPARTICIPANTSKEY = @"maxParticipants";
 #pragma mark - Private
 - (NSString*)methodString
 {
-    switch (_method) {
+    switch (_waitMethod) {
     case TwiMLHTTPMethodGET:
         return @"GET";
         break;
     case TwiMLHTTPMethodPOST:
-        return @"POST";
-        break;
-    default:
         return @"POST";
         break;
     }
@@ -69,13 +65,10 @@ static NSString* const kMAXPARTICIPANTSKEY = @"maxParticipants";
 
 - (NSString*)boolToString:(BOOL)caseBool
 {
-    switch (caseBool) {
-    case NO:
-        return @"false";
-        break;
-    case YES:
+    if (caseBool) {
         return @"true";
-        break;
+    } else {
+        return @"false";
     }
 }
 
@@ -96,4 +89,5 @@ static NSString* const kMAXPARTICIPANTSKEY = @"maxParticipants";
         break;
     }
 }
+
 @end

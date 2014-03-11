@@ -9,10 +9,11 @@
 
 @implementation INDTwiMLPlayElement
 
-- (instancetype)initWithTagName:(NSString*)tagName andValue:(NSString*)value
+static NSString* const kTagName = @"Play";
+
+- (instancetype)init
 {
-    self = [super initWithTagName:tagName
-                         andValue:value];
+    self = [super initWithTagName:kTagName];
 
     if (self) {
         _loop = 1;

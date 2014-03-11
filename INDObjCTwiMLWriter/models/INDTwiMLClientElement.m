@@ -8,6 +8,18 @@
 
 #import "INDTwiMLClientElement.h"
 
+static NSString* const kTagName = @"Client";
+
 @implementation INDTwiMLClientElement
+
+- (instancetype)init
+{
+    self = [super initWithTagName:kTagName];
+    if (self) {
+        _method = TwiMLHTTPMethodPOST;
+    }
+
+    return self;
+}
 
 @end

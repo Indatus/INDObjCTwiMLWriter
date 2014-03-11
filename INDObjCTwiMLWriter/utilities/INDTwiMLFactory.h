@@ -11,24 +11,24 @@
 @class INDTwiMLElement;
 
 typedef NS_ENUM(NSUInteger, INDTwiMLElementType) {
-    INDTwiMLClienetElement,
-    INDTwiMLConferenceElement,
-    INDTwiMLDialElement,
-    INDTwiMLEnqueueElement,
-    INDTwiMLGatherElement,
-    INDTwiMLHangupElement,
-    INDTwiMLLeaveElement,
-    INDTwiMLNestedDialElement,
-    INDTwiMLNumberElement,
-    INDTwiMLPauseElement,
-    INDTwiMLPlayElement,
-    INDTwiMLQueueElement,
-    INDTwiMLRecordElement,
-    INDTwiMLRedirectElement,
-    INDTwiMLRejectElement,
-    INDTwiMLSayElement,
-    INDTwiMLSipElement,
-    INDTwiMLSmsElement
+    INDTwiMLClienetElementType,
+    INDTwiMLConferenceElementType,
+    INDTwiMLDialElementType,
+    INDTwiMLEnqueueElementType,
+    INDTwiMLGatherElementType,
+    INDTwiMLHangupElementType,
+    INDTwiMLLeaveElementType,
+    INDTwiMLNestedDialElementType,
+    INDTwiMLNumberElementType,
+    INDTwiMLPauseElementType,
+    INDTwiMLPlayElementType,
+    INDTwiMLQueueElementType,
+    INDTwiMLRecordElementType,
+    INDTwiMLRedirectElementType,
+    INDTwiMLRejectElementType,
+    INDTwiMLSayElementType,
+    INDTwiMLSipElementType,
+    INDTwiMLSmsElementType
 };
 
 @interface INDTwiMLFactory : NSObject

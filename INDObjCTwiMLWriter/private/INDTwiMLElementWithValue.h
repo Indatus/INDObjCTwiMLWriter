@@ -12,7 +12,6 @@
 
 @property (nonatomic, copy) NSString* value;
 
-- (id)initWithTagName:(NSString*)tagName andValue:(NSString*)value;
 - (NSString*)xmlStringForTag:(NSString*)tag withAttributes:(NSDictionary*)attributes andValue:(NSString*)value;
 
 @end

@@ -7,11 +7,13 @@
 
 #import "INDTwiMLHangupElement.h"
 
+static NSString* const kTagName = @"Hangup";
+
 @implementation INDTwiMLHangupElement
 
-- (instancetype)initWithTagName:(NSString*)tagName
+- (instancetype)init
 {
-    return [super initWithTagName:tagName];
+    return [super initWithTagName:kTagName];
 }
 
 - (NSDictionary*)attributes

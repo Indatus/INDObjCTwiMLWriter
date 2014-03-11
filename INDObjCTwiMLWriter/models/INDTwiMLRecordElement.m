@@ -9,9 +9,11 @@
 
 @implementation INDTwiMLRecordElement
 
-- (instancetype)initWithTagName:(NSString*)tagName
+static NSString* const kTagName = @"Record";
+
+- (instancetype)init
 {
-    self = [super initWithTagName:tagName];
+    self = [super initWithTagName:kTagName];
 
     if (self) {
         _method = TwiMLHTTPMethodPOST;

@@ -8,11 +8,13 @@
 
 #import "INDTwiMLNestedDialElement.h"
 
+static NSString* const kTagName = @"Dial";
+
 @implementation INDTwiMLNestedDialElement
 
-- (instancetype)initWithTagName:(NSString*)tagName
+- (instancetype)init
 {
-    self = [super initWithTagName:tagName];
+    self = [super initWithTagName:kTagName];
     if (self) {
         _method = TwiMLHTTPMethodPOST;
         _timeout = 30;
@@ -75,4 +77,5 @@
         break;
     }
 }
+
 @end

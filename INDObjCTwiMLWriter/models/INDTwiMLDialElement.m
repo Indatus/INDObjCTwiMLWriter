@@ -14,13 +14,13 @@ static NSString* const kHANGUPONSTARKEY = @"hangUpOnStar";
 static NSString* const kTIMELIMITKEY = @"timeLimit";
 static NSString* const kCALLERIDKEY = @"callerId";
 static NSString* const kRECORDKEY = @"record";
+static NSString* const kTagName = @"Dial";
 
 @implementation INDTwiMLDialElement
 
-- (instancetype)initWithTagName:(NSString*)tagName andValue:(NSString*)value
+- (instancetype)init
 {
-    self = [super initWithTagName:tagName
-                         andValue:value];
+    self = [super initWithTagName:kTagName];
 
     if (self) {
         _method = TwiMLHTTPMethodPOST;

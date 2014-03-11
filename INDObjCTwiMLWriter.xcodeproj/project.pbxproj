@@ -106,6 +106,7 @@
 		0CC9A7B618CF4297005D01FB /* INDTwiMLConferenceElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INDTwiMLConferenceElement.m; sourceTree = "<group>"; };
 		0CC9A7B818CF42A7005D01FB /* INDTwiMLQueueElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INDTwiMLQueueElement.h; sourceTree = "<group>"; };
 		0CC9A7B918CF42A7005D01FB /* INDTwiMLQueueElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INDTwiMLQueueElement.m; sourceTree = "<group>"; };
+		0CC9A7BB18CF67EB005D01FB /* INDTwiMLConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = INDTwiMLConstants.h; sourceTree = "<group>"; };
 		0CD9358C18CE2FAF00B34375 /* libINDObjCTwiMLWriter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libINDObjCTwiMLWriter.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CD9358F18CE2FAF00B34375 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0CD9359318CE2FAF00B34375 /* INDObjCTwiMLWriter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "INDObjCTwiMLWriter-Prefix.pch"; sourceTree = "<group>"; };
@@ -201,6 +202,7 @@
 		0C56C48518CE331A0040EB6C /* utilities */ = {
 			isa = PBXGroup;
 			children = (
+				0CC9A7BB18CF67EB005D01FB /* INDTwiMLConstants.h */,
 				0C56C48618CE331A0040EB6C /* INDTwiMLFactory.h */,
 				0C56C48718CE331A0040EB6C /* INDTwiMLFactory.m */,
 				0C56C48818CE331A0040EB6C /* INDTwiMLWritter.h */,
