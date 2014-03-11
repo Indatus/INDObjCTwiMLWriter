@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Jeff Trespalacios. All rights reserved.
 //
 
-#import "INDTwiMLElement.h"
+#import "INDTwiMLNestableElement.h"
 
-@interface INDTwiMLGatherElement : INDTwiMLElement
+@interface INDTwiMLGatherElement : INDTwiMLNestableElement
 
 @end
