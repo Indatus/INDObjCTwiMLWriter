@@ -1,8 +1,7 @@
 //
 //  INDTwiMLEnqueueElement.m
-//  Airbreak
 //
-//  Created by Jeff Trespalacios on 3/10/14.
+//  Created by Jeff Styles on 3/10/14.
 //  Copyright (c) 2014 Jeff Trespalacios. All rights reserved.
 //
 
@@ -22,7 +21,7 @@
     return self;
 }
 
-- (NSString*)xmlString
+- (NSDictionary*)attributes
 {
     NSMutableDictionary* dict = [NSMutableDictionary new];
     if (_url) {
@@ -31,9 +30,7 @@
 
     dict[@"method"] = [self methodString];
 
-    return [self xmlStringForTag:self.tagName
-                  withAttributes:dict
-                        andValue:self.value];
+    return [dict copy];
 }
 
 - (NSString*)methodString
