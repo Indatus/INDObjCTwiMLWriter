@@ -8,6 +8,17 @@
 
 #import "INDTwiMLSipElement.h"
 
+static NSString* const kTagName = @"Sip";
+
 @implementation INDTwiMLSipElement
+
+- (instancetype)init
+{
+    self = [super initWithTagName:kTagName];
+    if (self) {
+    }
+
+    return self;
+}
 
 @end

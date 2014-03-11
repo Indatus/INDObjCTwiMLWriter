@@ -7,11 +7,13 @@
 
 #import "INDTwiMLGatherElement.h"
 
+static NSString* const kTagName = @"Gather";
+
 @implementation INDTwiMLGatherElement
 
-- (instancetype)initWithTagName:(NSString*)tagName
+- (instancetype)init
 {
-    self = [super initWithTagName:tagName];
+    self = [super initWithTagName:kTagName];
 
     if (self) {
         _method = TwiMLHTTPMethodPOST;

@@ -8,6 +8,17 @@
 
 #import "INDTwiMLNumberElement.h"
 
+static NSString* const kTagName = @"Number";
+
 @implementation INDTwiMLNumberElement
+
+- (instancetype)init
+{
+    self = [super initWithTagName:kTagName];
+    if (self) {
+    }
+
+    return self;
+}
 
 @end

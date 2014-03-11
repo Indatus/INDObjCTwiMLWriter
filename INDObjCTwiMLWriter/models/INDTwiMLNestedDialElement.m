@@ -8,6 +8,17 @@
 
 #import "INDTwiMLNestedDialElement.h"
 
+static NSString* const kTagName = @"Dial";
+
 @implementation INDTwiMLNestedDialElement
+
+- (instancetype)init
+{
+    self = [super initWithTagName:kTagName];
+    if (self) {
+    }
+
+    return self;
+}
 
 @end

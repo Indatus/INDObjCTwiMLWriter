@@ -7,11 +7,13 @@
 
 #import "INDTwiMLRejectElement.h"
 
+static NSString* const kTagName = @"Reject";
+
 @implementation INDTwiMLRejectElement
 
-- (instancetype)initWithTagName:(NSString*)tagName andValue:(NSString*)value
+- (instancetype)init
 {
-    self = [super initWithTagName:tagName];
+    self = [super initWithTagName:kTagName];
 
     if (self) {
         _reason = TwiMLRejectReasonRejected;

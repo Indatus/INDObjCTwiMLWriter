@@ -7,11 +7,13 @@
 
 #import "INDTwiMLPauseElement.h"
 
+static NSString* const kTagName = @"Pause";
+
 @implementation INDTwiMLPauseElement
 
-- (instancetype)initWithTagName:(NSString*)tagName
+- (instancetype)init
 {
-    self = [super initWithTagName:tagName];
+    self = [super initWithTagName:kTagName];
 
     if (self) {
         _pauseLength = 1;

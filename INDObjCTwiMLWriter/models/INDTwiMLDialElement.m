@@ -7,12 +7,13 @@
 
 #import "INDTwiMLDialElement.h"
 
+static NSString* const kTagName = @"Dial";
+
 @implementation INDTwiMLDialElement
 
-- (instancetype)initWithTagName:(NSString*)tagName andValue:(NSString*)value
+- (instancetype)init
 {
-    self = [super initWithTagName:tagName
-                         andValue:value];
+    self = [super initWithTagName:kTagName];
 
     if (self) {
         _method = TwiMLHTTPMethodPOST;

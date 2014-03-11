@@ -8,6 +8,16 @@
 
 #import "INDTwiMLConferenceElement.h"
 
+static NSString* const kTagName = @"Conference";
+
 @implementation INDTwiMLConferenceElement
 
+- (id)init
+{
+    self = [super initWithTagName:kTagName];
+    if (self) {
+    }
+
+    return self;
+}
 @end

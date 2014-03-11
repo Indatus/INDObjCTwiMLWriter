@@ -8,6 +8,16 @@
 
 #import "INDTwiMLQueueElement.h"
 
+static NSString* const kTagName = @"Queue";
+
 @implementation INDTwiMLQueueElement
 
+- (instancetype)init
+{
+    self = [super initWithTagName:kTagName];
+    if (self) {
+    }
+
+    return self;
+}
 @end
