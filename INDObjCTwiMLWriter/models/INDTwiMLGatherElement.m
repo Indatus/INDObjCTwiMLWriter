@@ -22,7 +22,7 @@
     return self;
 }
 
-- (NSString*)xmlString
+- (NSDictionary*)attributes
 {
     NSMutableDictionary* dict = [NSMutableDictionary new];
     if (_action) {
@@ -33,7 +33,7 @@
         dict[@"numDigits"] = [NSString stringWithFormat:@"%lud", (unsigned long)_numDigits];
     }
 
-    return [self xmlStringForTag:self.tagName
-                  withAttributes:dict];
+    return [dict copy];
 }
+
 @end

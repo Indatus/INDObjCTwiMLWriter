@@ -5,14 +5,14 @@
 //  Copyright (c) 2014 Jeff Trespalacios. All rights reserved.
 //
 
-#import "INDTwiMLElement.h"
+#import "INDTwiMLNestableElement.h"
 
 typedef NS_ENUM(NSInteger, TwiMLHTTPMethod) {
     TwiMLHTTPMethodPOST,
     TwiMLHTTPMethodGET
 };
 
-@interface INDTwiMLGatherElement : INDTwiMLElement
+@interface INDTwiMLGatherElement : INDTwiMLNestableElement
 
 @property (nonatomic) NSString* action;
 @property (nonatomic) TwiMLHTTPMethod method;

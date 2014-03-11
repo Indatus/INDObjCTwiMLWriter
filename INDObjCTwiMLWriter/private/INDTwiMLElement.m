@@ -25,15 +25,39 @@
     return nil;
 }
 
+- (NSDictionary*)attributes
+{
+    return nil;
+}
+
+- (NSString*)attributeString
+{
+    NSDictionary* attributes = [self attributes];
+    if (!attributes) {
+        return nil;
+    }
+
+    return [self stringForAttributes:attributes];
+}
+
+- (NSString*)stringForAttributes:(NSDictionary*)attributes
+{
+
+    NSMutableString* attributeString = [NSMutableString new];
+    [attributes enumerateKeysAndObjectsUsingBlock:
+                    ^(NSString* key, NSString* value, BOOL* stop) {
+                        [attributeString appendFormat:@" %@=\"%@\"", key, value];
+                    }];
+
+    return [attributeString copy];
+}
+
 - (NSString*)xmlStringForTag:(NSString*)tag withAttributes:(NSDictionary*)attributes
 {
     NSMutableString* xmlString = [NSMutableString stringWithFormat:@"<%@", tag];
 
     if (attributes) {
-        [attributes enumerateKeysAndObjectsUsingBlock:
-                        ^(NSString* key, NSString* value, BOOL* stop) {
-                            [xmlString appendFormat:@" %@='%@'", key, value];
-                        }];
+        [xmlString appendFormat:@" %@", [self stringForAttributes:attributes]];
     }
     [xmlString appendString:@" />"];
 

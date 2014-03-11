@@ -15,6 +15,8 @@
 - (instancetype)initWithTagName:(NSString*)tagName;
 
 - (NSString*)xmlString;
+- (NSDictionary*)attributes;
+- (NSString*)attributeString;
 - (NSString*)xmlStringForTag:(NSString*)tag withAttributes:(NSDictionary*)attributes;
 
 @end
