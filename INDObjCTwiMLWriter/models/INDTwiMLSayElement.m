@@ -8,9 +8,46 @@
 
 #import "INDTwiMLSayElement.h"
 
-static NSString* const kLoopsKeyPath = @"loops";
-static NSString* const kLanguageKeyPath = @"language";
-static NSString* const kVoiceKeyPath = @"voice";
+static NSString* const kLOOPKEY = @"loop";
+static NSString* const kLANGUAGEKEY = @"language";
+static NSString* const kVOICEKEY = @"voice";
+
+static NSString* const kMANVOICE = @"man";
+static NSString* const kWOMANVOICE = @"woman";
+static NSString* const kALICEVOICE = @"alice";
+
+static NSString* const kLANGENGLISH = @"en";
+static NSString* const kLANGENGLISHGB = @"en-gb";
+static NSString* const kLANGSPANISH = @"es";
+static NSString* const kLANGFRENCH = @"fr";
+static NSString* const kLANGGERMAN = @"de";
+static NSString* const kLANGITALIAN = @"it";
+static NSString* const kLANGDANISHDENNARK = @"da-DK";
+static NSString* const kLANGGERMANGERMANY = @"de-DE";
+static NSString* const kLANGENGLISHAUSTRALIA = @"en-AU";
+static NSString* const kLANGENGLISHCANADA = @"en-CA";
+static NSString* const kLANGENGLISHUK = @"en-GB";
+static NSString* const kLANGENGLISHINDIA = @"en-IN";
+static NSString* const kLANGENGLISHUNITEDSTATES = @"en-US";
+static NSString* const kLANGCATALANSPAIN = @"ca-ES";
+static NSString* const kLANGSPANISHSPAIN = @"es-ES";
+static NSString* const kLANGSPANISHMEXICO = @"es-MX";
+static NSString* const kLANGFINNISHFINLAND = @"fi-FI";
+static NSString* const kLANGFRENCHCANADA = @"fr-CA";
+static NSString* const kLANGFRENCHFRANCE = @"fr-FR";
+static NSString* const kLANGITALIANITALY = @"it-IT";
+static NSString* const kLANGJAPANESEJAPAN = @"ja-JP";
+static NSString* const kLANGKOREANKOREA = @"ko-KR";
+static NSString* const kLANGNORWEGIANNORWAY = @"nb-NO";
+static NSString* const kLANGDUTCHNETHERLANDS = @"nl-NL";
+static NSString* const kLANGPOLISHPOLAND = @"pl-PL";
+static NSString* const kLANGPORTUGUESEBRAZIL = @"pt-BR";
+static NSString* const kLANGPORTUGUESEPORTUGAL = @"pt-PT";
+static NSString* const kLANGRUSSIANRUSSIA = @"ru-RU";
+static NSString* const kLANGSWEDISHSWEDEN = @"sv-SE";
+static NSString* const kLANGCHINESEMANDARIN = @"zh-CN";
+static NSString* const kLANGCHINESECANTONESE = @"zh-HK";
+static NSString* const kLANGCHINESETAEWANESEMANDARIN = @"zh-TW";
 
 @implementation INDTwiMLSayElement
 @synthesize loops = _loops;
@@ -30,13 +67,13 @@ static NSString* const kVoiceKeyPath = @"voice";
     return self;
 }
 
-- (NSDictionary *)attributes
+- (NSDictionary*)attributes
 {
-    NSMutableDictionary *dict = [NSMutableDictionary new];
-    dict[@"voice"] = [self voiceString];
-    dict[@"loop"] = [NSString stringWithFormat:@"%lud", (unsigned long)_loops];
-    dict[@"language"] = [self languageString];
-    
+    NSMutableDictionary* dict = [NSMutableDictionary new];
+    dict[kVOICEKEY] = [self voiceString];
+    dict[kLOOPKEY] = [NSString stringWithFormat:@"%lud", (unsigned long)_loops];
+    dict[kLANGUAGEKEY] = [self languageString];
+
     return [dict copy];
 }
 
@@ -45,13 +82,13 @@ static NSString* const kVoiceKeyPath = @"voice";
 {
     switch (_voice) {
     case TwiMLSayVoiceMan:
-        return @"man";
+        return kMANVOICE;
         break;
     case TwiMLSayVoiceWoman:
-        return @"woman";
+        return kWOMANVOICE;
         break;
     case TwiMLSayVoiceAlice:
-        return @"alice";
+        return kALICEVOICE;
         break;
     }
 }
@@ -60,100 +97,100 @@ static NSString* const kVoiceKeyPath = @"voice";
 {
     switch (_language) {
     case TwiMLSayLanguageEnglish:
-        return @"en";
+        return kLANGENGLISH;
         break;
     case TwiMLSayLanguageEnglishGreatBritain:
-        return @"en-gb";
+        return kLANGENGLISHGB;
         break;
     case TwiMLSayLanguageSpanish:
-        return @"es";
+        return kLANGSPANISH;
         break;
     case TwiMLSayLanguageFrench:
-        return @"fr";
+        return kLANGFRENCH;
         break;
     case TwiMLSayLanguageGerman:
-        return @"de";
+        return kLANGGERMAN;
         break;
     case TwiMLSayLanguageItalian:
-        return @"it";
+        return kLANGITALIAN;
         break;
     case TwiMLSayLanguageDanishDenmark:
-        return @"da-DK";
+        return kLANGDANISHDENNARK;
         break;
     case TwiMLSayLanguageGermanGermany:
-        return @"de-DE";
+        return kLANGGERMANGERMANY;
         break;
     case TwiMLSayLanguageEnglishAustralia:
-        return @"en-AU";
+        return kLANGENGLISHAUSTRALIA;
         break;
     case TwiMLSayLanguageEnglishCanada:
-        return @"en-CA";
+        return kLANGENGLISHCANADA;
         break;
     case TwiMLSayLanguageEnglishUK:
-        return @"en-GB";
+        return kLANGENGLISHUK;
         break;
     case TwiMLSayLanguageEnglishIndia:
-        return @"en-IN";
+        return kLANGENGLISHINDIA;
         break;
     case TwiMLSayLanguageEnglishUnitedStates:
-        return @"en-US";
+        return kLANGENGLISHUNITEDSTATES;
         break;
     case TwiMLSayLanguageCatalanSpain:
-        return @"ca-ES";
+        return kLANGCATALANSPAIN;
         break;
     case TwiMLSayLanguageSpanishSpain:
-        return @"es-ES";
+        return kLANGSPANISHSPAIN;
         break;
     case TwiMLSayLanguageSpanishMexico:
-        return @"es-MX";
+        return kLANGSPANISHMEXICO;
         break;
     case TwiMLSayLanguageFinnishFinland:
-        return @"fi-FI";
+        return kLANGFINNISHFINLAND;
         break;
     case TwiMLSayLanguageFrenchCanada:
-        return @"fr-CA";
+        return kLANGFRENCHCANADA;
         break;
     case TwiMLSayLanguageFrenchFrance:
-        return @"fr-FR";
+        return kLANGFRENCHFRANCE;
         break;
     case TwiMLSayLanguageItalianItaly:
-        return @"it-IT";
+        return kLANGITALIANITALY;
         break;
     case TwiMLSayLanguageJapaneseJapan:
-        return @"ja-JP";
+        return kLANGJAPANESEJAPAN;
         break;
     case TwiMLSayLanguageKoreanKorea:
-        return @"ko-KR";
+        return kLANGKOREANKOREA;
         break;
     case TwiMLSayLanguageNorwegianNorway:
-        return @"nb-NO";
+        return kLANGNORWEGIANNORWAY;
         break;
     case TwiMLSayLanguageDutchNetherlands:
-        return @"nl-NL";
+        return kLANGDUTCHNETHERLANDS;
         break;
     case TwiMLSayLanguagePolishPoland:
-        return @"pl-PL";
+        return kLANGPOLISHPOLAND;
         break;
     case TwiMLSayLanguagePortugueseBrazil:
-        return @"pt-BR";
+        return kLANGPORTUGUESEBRAZIL;
         break;
     case TwiMLSayLanguagePortuguesePortugal:
-        return @"pt-PT";
+        return kLANGPORTUGUESEPORTUGAL;
         break;
     case TwiMLSayLanguageRussianRussia:
-        return @"ru-RU";
+        return kLANGRUSSIANRUSSIA;
         break;
     case TwiMLSayLanguageSwedishSweden:
-        return @"sv-SE";
+        return kLANGSWEDISHSWEDEN;
         break;
     case TwiMLSayLanguageChineseMandarin:
-        return @"zh-CN";
+        return kLANGCHINESEMANDARIN;
         break;
     case TwiMLSayLanguageChineseCantonese:
-        return @"zh-HK";
+        return kLANGCHINESECANTONESE;
         break;
     case TwiMLSayLanguageChineseTaiwaneseMandarin:
-        return @"zh-TW";
+        return kLANGCHINESETAEWANESEMANDARIN;
         break;
     }
 }
