@@ -8,6 +8,12 @@
 
 #import "INDTwiMLSmsElement.h"
 
+static NSString* const kTOKEY = @"to";
+static NSString* const kFROMKEY = @"from";
+static NSString* const kACTIONKEY = @"action";
+static NSString* const kMETHODKEY = @"method";
+static NSString* const kSTATUSCALLBACKKEY = @"statusCallback";
+
 @implementation INDTwiMLSmsElement
 
 - (instancetype)initWithTagName:(NSString*)tagName andValue:(NSString*)value
@@ -26,23 +32,23 @@
 {
     NSMutableDictionary* dict = [NSMutableDictionary new];
     if (_toPhoneNumber) {
-        dict[@"to"] = _toPhoneNumber;
+        dict[kTOKEY] = _toPhoneNumber;
     }
 
     if (_fromPhoneNumber) {
-        dict[@"from"] = _fromPhoneNumber;
+        dict[kFROMKEY] = _fromPhoneNumber;
     }
 
     if (_action) {
-        dict[@"action"] = _action;
+        dict[kACTIONKEY] = _action;
     }
 
     if (_method) {
-        dict[@"method"] = [self methodString];
+        dict[kMETHODKEY] = [self methodString];
     }
 
     if (_statusCallback) {
-        dict[@"statusCallback"] = _statusCallback;
+        dict[kSTATUSCALLBACKKEY] = _statusCallback;
     }
 
     return [dict copy];
@@ -57,9 +63,6 @@
         return @"GET";
         break;
     case TwiMLHTTPMethodPOST:
-        return @"POST";
-        break;
-    default:
         return @"POST";
         break;
     }
