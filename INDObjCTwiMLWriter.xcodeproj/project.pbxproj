@@ -202,11 +202,11 @@
 		0C56C48518CE331A0040EB6C /* utilities */ = {
 			isa = PBXGroup;
 			children = (
+				0CC9A7BB18CF67EB005D01FB /* INDTwiMLConstants.h */,
 				0C56C48618CE331A0040EB6C /* INDTwiMLFactory.h */,
 				0C56C48718CE331A0040EB6C /* INDTwiMLFactory.m */,
 				0C56C48818CE331A0040EB6C /* INDTwiMLWritter.h */,
 				0C56C48918CE331A0040EB6C /* INDTwiMLWritter.m */,
-				0CC9A7BB18CF67EB005D01FB /* INDTwiMLConstants.h */,
 			);
 			path = utilities;
 			sourceTree = "<group>";
