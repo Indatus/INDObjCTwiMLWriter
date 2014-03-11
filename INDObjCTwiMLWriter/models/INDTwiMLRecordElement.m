@@ -7,16 +7,16 @@
 
 #import "INDTwiMLRecordElement.h"
 
-static NSString* const kACTIONKEY = @"action";
-static NSString* const kMETHODKEY = @"method";
-static NSString* const kTIMEOUTKEY = @"timeout";
-static NSString* const kFINISHONKEY = @"finishOnKey";
-static NSString* const kMAXLENGTHKEY = @"maxLength";
-static NSString* const kTRANSCRIBEKEY = @"transcribe";
-static NSString* const kTRANSCRIBECALLBACKKEY = @"transcribeCallback";
-static NSString* const kPLAYBEEPKEY = @"playBeep";
+static NSString* const kActionKey = @"action";
+static NSString* const kMethodKey = @"method";
+static NSString* const kTimeoutKey = @"timeout";
+static NSString* const kFinishOnKeyKey = @"finishOnKey";
+static NSString* const kMaxLengthKey = @"maxLength";
+static NSString* const kTranscribeKey = @"transcribe";
+static NSString* const kTranscribeCallbackKey = @"transcribeCallback";
+static NSString* const kPlayBeepKey = @"playBeep";
 
-static NSString* const kDEFAULTFINISHONKEYVALUE = @"123456789*#";
+static NSString* const kDefaultFinishOnKeyValue = @"123456789*#";
 
 @implementation INDTwiMLRecordElement
 
@@ -29,7 +29,7 @@ static NSString* const kTagName = @"Record";
     if (self) {
         _method = TwiMLHTTPMethodPOST;
         _timeout = 5;
-        _finishOnKey = kDEFAULTFINISHONKEYVALUE;
+        _finishOnKey = kDefaultFinishOnKeyValue;
         _maxLength = 3600;
         _transcribe = NO;
         _playBeep = YES;
@@ -42,20 +42,20 @@ static NSString* const kTagName = @"Record";
 {
     NSMutableDictionary* dict = [NSMutableDictionary new];
     if (_action) {
-        dict[kACTIONKEY] = _action;
+        dict[kActionKey] = _action;
     }
 
-    dict[kMETHODKEY] = [self methodString];
-    dict[kTIMEOUTKEY] = [NSString stringWithFormat:@"%lud", (unsigned long)_timeout];
-    dict[kFINISHONKEY] = _finishOnKey;
-    dict[kMAXLENGTHKEY] = [NSString stringWithFormat:@"%lud", (unsigned long)_maxLength];
-    dict[kTRANSCRIBEKEY] = [self transcribeString];
+    dict[kMethodKey] = [self methodString];
+    dict[kTimeoutKey] = [NSString stringWithFormat:@"%lud", (unsigned long)_timeout];
+    dict[kFinishOnKeyKey] = _finishOnKey;
+    dict[kMaxLengthKey] = [NSString stringWithFormat:@"%lud", (unsigned long)_maxLength];
+    dict[kTranscribeKey] = [self transcribeString];
 
     if (_transcribeCallback) {
-        dict[kTRANSCRIBECALLBACKKEY] = _transcribeCallback;
+        dict[kTranscribeCallbackKey] = _transcribeCallback;
     }
 
-    dict[kPLAYBEEPKEY] = [self playBeepString];
+    dict[kPlayBeepKey] = [self playBeepString];
 
     return [dict copy];
 }

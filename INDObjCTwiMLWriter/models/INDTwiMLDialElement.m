@@ -7,9 +7,9 @@
 
 #import "INDTwiMLDialElement.h"
 
-static NSString* const kACTIONKEY = @"action";
-static NSString* const kMETHODKEY = @"method";
-static NSString* const kTIMEOUTKEY = @"timeout";
+static NSString* const kActionKey = @"action";
+static NSString* const kMethodKey = @"method";
+static NSString* const kTimeoutKey = @"timeout";
 static NSString* const kHANGUPONSTARKEY = @"hangUpOnStar";
 static NSString* const kTIMELIMITKEY = @"timeLimit";
 static NSString* const kCALLERIDKEY = @"callerId";
@@ -37,11 +37,11 @@ static NSString* const kTagName = @"Dial";
 {
     NSMutableDictionary* dict = [NSMutableDictionary new];
     if (_action) {
-        dict[kACTIONKEY] = _action;
+        dict[kActionKey] = _action;
     }
 
-    dict[kMETHODKEY] = [self methodString];
-    dict[kTIMEOUTKEY] = [NSString stringWithFormat:@"%lud", (unsigned long)_timeout];
+    dict[kMethodKey] = [self methodString];
+    dict[kTimeoutKey] = [NSString stringWithFormat:@"%lud", (unsigned long)_timeout];
     dict[kHANGUPONSTARKEY] = [self boolToString:_hangupOnStar];
     dict[kTIMELIMITKEY] = [NSString stringWithFormat:@"%lud", (unsigned long)_timeLimit];
 

@@ -8,7 +8,7 @@
 #import "INDTwiMLGatherElement.h"
 
 static NSString* const kTagName = @"Gather";
-static NSString* const kACTIONKEY = @"action";
+static NSString* const kActionKey = @"action";
 static NSString* const kNUMDIGITSKEY = @"numDigits";
 
 @implementation INDTwiMLGatherElement
@@ -30,7 +30,7 @@ static NSString* const kNUMDIGITSKEY = @"numDigits";
 {
     NSMutableDictionary* dict = [NSMutableDictionary new];
     if (_action) {
-        dict[kACTIONKEY] = _action;
+        dict[kActionKey] = _action;
     }
 
     if (_numDigits) {

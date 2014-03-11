@@ -9,7 +9,7 @@
 
 static NSString* const kTagName = @"Enqueue";
 static NSString * const kURLKEY = @"url";
-static NSString * const kMETHODKEY = @"method";
+static NSString * const kMethodKey = @"method";
 
 @implementation INDTwiMLEnqueueElement
 
@@ -31,7 +31,7 @@ static NSString * const kMETHODKEY = @"method";
         dict[kURLKEY] = _url;
     }
 
-    dict[kMETHODKEY] = [self methodString];
+    dict[kMethodKey] = [self methodString];
 
     return [dict copy];
 }

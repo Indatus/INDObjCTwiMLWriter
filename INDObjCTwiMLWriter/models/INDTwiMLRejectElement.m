@@ -9,10 +9,10 @@
 
 
 static NSString* const kTagName = @"Reject";
-static NSString* const kREASONKEY = @"reason";
+static NSString* const kReasonKey = @"reason";
 
-static NSString* const kREASONREJECTED = @"rejected";
-static NSString* const kREASONBUSY = @"busy";
+static NSString* const kReasonRejected = @"rejected";
+static NSString* const kReasonBusy = @"busy";
 
 
 @implementation INDTwiMLRejectElement
@@ -31,7 +31,7 @@ static NSString* const kREASONBUSY = @"busy";
 - (NSDictionary*)attributes
 {
     return @{
-        kREASONKEY : [self reasonString]
+        kReasonKey : [self reasonString]
     };
 }
 
@@ -39,10 +39,10 @@ static NSString* const kREASONBUSY = @"busy";
 {
     switch (_reason) {
     case TwiMLRejectReasonBusy:
-        return kREASONBUSY;
+        return kReasonBusy;
         break;
     case TwiMLRejectReasonRejected:
-        return kREASONREJECTED;
+        return kReasonRejected;
     }
 }
 

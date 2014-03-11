@@ -11,11 +11,11 @@
 
 static NSString* const kTagName = @"Sms";
 
-static NSString* const kTOKEY = @"to";
-static NSString* const kFROMKEY = @"from";
-static NSString* const kACTIONKEY = @"action";
-static NSString* const kMETHODKEY = @"method";
-static NSString* const kSTATUSCALLBACKKEY = @"statusCallback";
+static NSString* const kToKey = @"to";
+static NSString* const kFromKey = @"from";
+static NSString* const kActionKey = @"action";
+static NSString* const kMethodKey = @"method";
+static NSString* const kStatusCallbackKey = @"statusCallback";
 
 
 @implementation INDTwiMLSmsElement
@@ -35,23 +35,23 @@ static NSString* const kSTATUSCALLBACKKEY = @"statusCallback";
 {
     NSMutableDictionary* dict = [NSMutableDictionary new];
     if (_toPhoneNumber) {
-        dict[kTOKEY] = _toPhoneNumber;
+        dict[kToKey] = _toPhoneNumber;
     }
 
     if (_fromPhoneNumber) {
-        dict[kFROMKEY] = _fromPhoneNumber;
+        dict[kFromKey] = _fromPhoneNumber;
     }
 
     if (_action) {
-        dict[kACTIONKEY] = _action;
+        dict[kActionKey] = _action;
     }
 
     if (_method) {
-        dict[kMETHODKEY] = [self methodString];
+        dict[kMethodKey] = [self methodString];
     }
 
     if (_statusCallback) {
-        dict[kSTATUSCALLBACKKEY] = _statusCallback;
+        dict[kStatusCallbackKey] = _statusCallback;
     }
 
     return [dict copy];

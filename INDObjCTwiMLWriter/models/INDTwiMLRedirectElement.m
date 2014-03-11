@@ -8,7 +8,7 @@
 #import "INDTwiMLRedirectElement.h"
 
 static NSString* const kTagName = @"Redirect";
-static NSString* const kMETHODKEY = @"method";
+static NSString* const kMethodKey = @"method";
 
 @implementation INDTwiMLRedirectElement
 
@@ -26,7 +26,7 @@ static NSString* const kMETHODKEY = @"method";
 - (NSDictionary*)attributes
 {
     NSMutableDictionary* dict = [NSMutableDictionary new];
-    dict[kMETHODKEY] = [self methodString];
+    dict[kMethodKey] = [self methodString];
 
     return [dict copy];
 }
