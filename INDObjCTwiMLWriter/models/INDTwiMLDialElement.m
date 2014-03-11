@@ -2,10 +2,18 @@
 //  INDTwiMLDialElement.m
 //
 //  Created by Jeff Styles on 3/10/14.
-//  Copyright (c) 2014 Jeff Trespalacios. All rights reserved.
+//  Copyright (c) 2014 Jeff Taco. All rights reserved.
 //
 
 #import "INDTwiMLDialElement.h"
+
+static NSString* const kACTIONKEY = @"action";
+static NSString* const kMETHODKEY = @"method";
+static NSString* const kTIMEOUTKEY = @"timeout";
+static NSString* const kHANGUPONSTARKEY = @"hangUpOnStar";
+static NSString* const kTIMELIMITKEY = @"timeLimit";
+static NSString* const kCALLERIDKEY = @"callerId";
+static NSString* const kRECORDKEY = @"record";
 
 @implementation INDTwiMLDialElement
 
@@ -29,19 +37,19 @@
 {
     NSMutableDictionary* dict = [NSMutableDictionary new];
     if (_action) {
-        dict[@"action"] = _action;
+        dict[kACTIONKEY] = _action;
     }
 
-    dict[@"method"] = [self methodString];
-    dict[@"timeout"] = [NSString stringWithFormat:@"%lud", (unsigned long)_timeout];
-    dict[@"hangupOnStar"] = [self boolToString:_hangupOnStar];
-    dict[@"timeLimit"] = [NSString stringWithFormat:@"%lud", (unsigned long)_timeLimit];
+    dict[kMETHODKEY] = [self methodString];
+    dict[kTIMEOUTKEY] = [NSString stringWithFormat:@"%lud", (unsigned long)_timeout];
+    dict[kHANGUPONSTARKEY] = [self boolToString:_hangupOnStar];
+    dict[kTIMELIMITKEY] = [NSString stringWithFormat:@"%lud", (unsigned long)_timeLimit];
 
     if (_callerId) {
-        dict[@"caller_id"] = _callerId;
+        dict[kCALLERIDKEY] = _callerId;
     }
 
-    dict[@"record"] = [self boolToString:_record];
+    dict[kRECORDKEY] = [self boolToString:_record];
 
     return [dict copy];
 }
