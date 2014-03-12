@@ -18,7 +18,7 @@ it simply add the following line to your Podfile:
 
 ## Authors
 
-Jeff Trespalacios, jeff.trespalacios@gmail.com
+Jeff Trespalacios, jeff.trespalacios@gmail.com <br>
 Jeff Styles, jeff.styles88@gmail.com
 
 ## License
