@@ -16,9 +16,10 @@ it simply add the following line to your Podfile:
 
     pod "INDObjCTwiMLWriter"
 
-## Author
+## Authors
 
 Jeff Trespalacios, jeff.trespalacios@gmail.com
+Jeff Styles, jeff.styles88@gmail.com
 
 ## License
 
