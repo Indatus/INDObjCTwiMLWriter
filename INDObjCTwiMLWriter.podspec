@@ -6,32 +6,13 @@
 #
 Pod::Spec.new do |s|
   s.name             = "INDObjCTwiMLWriter"
-  s.version          = "0.1.0"
-  s.summary          = "A short description of INDObjCTwiMLWriter."
-  s.description      = <<-DESC
-                       An optional longer description of INDObjCTwiMLWriter
-
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
-                       DESC
-  s.homepage         = "http://EXAMPLE/NAME"
-  s.screenshots      = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
+  s.version          = "0.0.1"
+  s.summary          = "A TwiML generator library in Objective-C."
+  s.homepage         = "https://github.com/Indatus/INDObjCTwiMLWriter"
   s.license          = 'MIT'
-  s.author           = { "Jeff Trespalacios" => "jeff.trespalacios@gmail.com" }
+  s.author           = { "Jeff Trespalacios" => "jeff.trespalacios@gmail.com", "Jeff Styles" => "jstyles@indatus.com" }
   s.source           = { :git => "http://EXAMPLE/NAME.git", :tag => s.version.to_s }
-  s.social_media_url = 'https://twitter.com/NAME'
-
-  # s.platform     = :ios, '5.0'
-  # s.ios.deployment_target = '5.0'
-  # s.osx.deployment_target = '10.7'
   s.requires_arc = true
-
-  s.source_files = 'Classes'
-  s.resources = 'Resources'
-
-  s.ios.exclude_files = 'Classes/osx'
-  s.osx.exclude_files = 'Classes/ios'
-  # s.public_header_files = 'Classes/**/*.h'
-  # s.frameworks = 'SomeFramework', 'AnotherFramework'
-  # s.dependency 'JSONKit', '~> 1.4'
+  s.source_files = 'INDObjCTwiMLWriter/**/*.{h,m}'
+  s.public_header_files = 'INDObjCTwiMLWriter/models/*.h','INDObjCTwiMLWriter/utilities/*.h'
 end
