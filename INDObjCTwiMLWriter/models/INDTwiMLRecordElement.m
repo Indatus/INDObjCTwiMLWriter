@@ -78,33 +78,21 @@ static NSString* const kTagName = @"Record";
 
 - (NSString*)transcribeString
 {
-    switch (_transcribe) {
-    case NO:
-        return @"false";
-        break;
-
-    case YES:
+    if (_transcribe) {
         return @"true";
-
-    default:
+    }
+    else {
         return @"false";
-        break;
     }
 }
 
 - (NSString*)playBeepString
 {
-    switch (_playBeep) {
-    case NO:
-        return @"false";
-        break;
-
-    case YES:
+    if (_playBeep) {
         return @"true";
-
-    default:
+    }
+    else {
         return @"false";
-        break;
     }
 }
 @end

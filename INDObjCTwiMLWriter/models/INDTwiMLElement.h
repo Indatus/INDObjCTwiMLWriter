@@ -6,14 +6,11 @@
 //  Copyright (c) 2014 Jeff Trespalacios. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "INDTwiMLBaseElement.h"
 
-@interface INDTwiMLElement : NSObject
+@interface INDTwiMLElement : INDTwiMLBaseElement
 
-@property (nonatomic, copy, readonly) NSString* tagName;
-
-- (instancetype)initWithTagName:(NSString*)tagName;
-
+- (NSString *)tagName;
 - (NSString*)xmlString;
 - (NSDictionary*)attributes;
 - (NSString*)attributeString;

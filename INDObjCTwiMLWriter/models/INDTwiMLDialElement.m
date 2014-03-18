@@ -72,16 +72,11 @@ static NSString* const kTagName = @"Dial";
 
 - (NSString*)boolToString:(BOOL)caseBool
 {
-    switch (caseBool) {
-    case NO:
-        return @"false";
-        break;
-    case YES:
+    if (caseBool) {
         return @"true";
-        break;
-    default:
+    }
+    else {
         return @"false";
-        break;
     }
 }
 @end

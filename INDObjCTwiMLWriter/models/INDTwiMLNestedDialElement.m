@@ -72,16 +72,11 @@ static NSString* const kRecordKey = @"record";
 
 - (NSString*)boolToString:(BOOL)caseBool
 {
-    switch (caseBool) {
-    case NO:
+    if (caseBool) {
+        return @"true";   
+    }
+    else {
         return @"false";
-        break;
-    case YES:
-        return @"true";
-        break;
-    default:
-        return @"false";
-        break;
     }
 }
 

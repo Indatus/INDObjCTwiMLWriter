@@ -36,6 +36,7 @@
 		0CD935A418CE2FAF00B34375 /* libINDObjCTwiMLWriter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD9358C18CE2FAF00B34375 /* libINDObjCTwiMLWriter.a */; };
 		0CD935AA18CE2FAF00B34375 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0CD935A818CE2FAF00B34375 /* InfoPlist.strings */; };
 		0CD935AC18CE2FAF00B34375 /* INDObjCTwiMLWriterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD935AB18CE2FAF00B34375 /* INDObjCTwiMLWriterTests.m */; };
+		0CDD4E0318D88ACE00ECE264 /* INDTwiMLBaseElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CDD4E0218D88ACE00ECE264 /* INDTwiMLBaseElement.m */; };
 		37345A0818CE443000CE21A7 /* INDTwiMLSmsElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 37345A0718CE443000CE21A7 /* INDTwiMLSmsElement.m */; };
 /* End PBXBuildFile section */
 
@@ -116,6 +117,8 @@
 		0CD935A718CE2FAF00B34375 /* INDObjCTwiMLWriterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "INDObjCTwiMLWriterTests-Info.plist"; sourceTree = "<group>"; };
 		0CD935A918CE2FAF00B34375 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0CD935AB18CE2FAF00B34375 /* INDObjCTwiMLWriterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = INDObjCTwiMLWriterTests.m; sourceTree = "<group>"; };
+		0CDD4E0118D88ACE00ECE264 /* INDTwiMLBaseElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INDTwiMLBaseElement.h; sourceTree = "<group>"; };
+		0CDD4E0218D88ACE00ECE264 /* INDTwiMLBaseElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INDTwiMLBaseElement.m; sourceTree = "<group>"; };
 		37345A0618CE443000CE21A7 /* INDTwiMLSmsElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INDTwiMLSmsElement.h; sourceTree = "<group>"; };
 		37345A0718CE443000CE21A7 /* INDTwiMLSmsElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INDTwiMLSmsElement.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -152,6 +155,10 @@
 				0CC9A7B618CF4297005D01FB /* INDTwiMLConferenceElement.m */,
 				0C56C46C18CE331A0040EB6C /* INDTwiMLDialElement.h */,
 				0C56C46D18CE331A0040EB6C /* INDTwiMLDialElement.m */,
+				0C56C48318CE331A0040EB6C /* INDTwiMLElement.h */,
+				0C56C48418CE331A0040EB6C /* INDTwiMLElement.m */,
+				0C5FBEE618CE394E00AD374C /* INDTwiMLElementWithValue.h */,
+				0C5FBEE718CE394E00AD374C /* INDTwiMLElementWithValue.m */,
 				0C56C46E18CE331A0040EB6C /* INDTwiMLEnqueueElement.h */,
 				0C56C46F18CE331A0040EB6C /* INDTwiMLEnqueueElement.m */,
 				0C56C47018CE331A0040EB6C /* INDTwiMLGatherElement.h */,
@@ -160,6 +167,8 @@
 				0C56C47318CE331A0040EB6C /* INDTwiMLHangupElement.m */,
 				0C56C47418CE331A0040EB6C /* INDTwiMLLeaveElement.h */,
 				0C56C47518CE331A0040EB6C /* INDTwiMLLeaveElement.m */,
+				0CC9A79E18CE563A005D01FB /* INDTwiMLNestableElement.h */,
+				0CC9A79F18CE563A005D01FB /* INDTwiMLNestableElement.m */,
 				0CC9A7A918CF3CF3005D01FB /* INDTwiMLNestedDialElement.h */,
 				0CC9A7AA18CF3CF3005D01FB /* INDTwiMLNestedDialElement.m */,
 				0CC9A7AC18CF426A005D01FB /* INDTwiMLNumberElement.h */,
@@ -189,12 +198,8 @@
 		0C56C48218CE331A0040EB6C /* private */ = {
 			isa = PBXGroup;
 			children = (
-				0C56C48318CE331A0040EB6C /* INDTwiMLElement.h */,
-				0C56C48418CE331A0040EB6C /* INDTwiMLElement.m */,
-				0C5FBEE618CE394E00AD374C /* INDTwiMLElementWithValue.h */,
-				0C5FBEE718CE394E00AD374C /* INDTwiMLElementWithValue.m */,
-				0CC9A79E18CE563A005D01FB /* INDTwiMLNestableElement.h */,
-				0CC9A79F18CE563A005D01FB /* INDTwiMLNestableElement.m */,
+				0CDD4E0118D88ACE00ECE264 /* INDTwiMLBaseElement.h */,
+				0CDD4E0218D88ACE00ECE264 /* INDTwiMLBaseElement.m */,
 			);
 			path = private;
 			sourceTree = "<group>";
@@ -371,6 +376,7 @@
 				0C56C49318CE331A0040EB6C /* INDTwiMLRejectElement.m in Sources */,
 				0CC9A7AB18CF3CF3005D01FB /* INDTwiMLNestedDialElement.m in Sources */,
 				0C5FBEE818CE394E00AD374C /* INDTwiMLElementWithValue.m in Sources */,
+				0CDD4E0318D88ACE00ECE264 /* INDTwiMLBaseElement.m in Sources */,
 				0CC9A7B418CF4287005D01FB /* INDTwiMLClientElement.m in Sources */,
 				0CC9A7B118CF4279005D01FB /* INDTwiMLSipElement.m in Sources */,
 				0C56C48B18CE331A0040EB6C /* INDTwiMLEnqueueElement.m in Sources */,

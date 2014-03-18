@@ -10,14 +10,9 @@
 
 @implementation INDTwiMLElement
 
-- (instancetype)initWithTagName:(NSString*)tagName
+-(NSString*)tagName
 {
-    self = [super init];
-    if (self) {
-        _tagName = [tagName copy];
-    }
-
-    return self;
+    return self.tagName;
 }
 
 - (NSString*)xmlString
