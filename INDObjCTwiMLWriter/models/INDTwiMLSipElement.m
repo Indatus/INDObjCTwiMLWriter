@@ -10,6 +10,9 @@
 
 static NSString* const kTagName = @"Sip";
 
+static NSString* const kUsernameKey = @"username";
+static NSString* const kPasswordKey = @"password";
+
 @implementation INDTwiMLSipElement
 
 - (instancetype)init
@@ -19,6 +22,19 @@ static NSString* const kTagName = @"Sip";
     }
 
     return self;
+}
+
+- (NSDictionary*)attributes
+{
+    NSMutableDictionary* dict = [NSMutableDictionary new];
+    if (_username) {
+        dict[kUsernameKey] = _username;
+    }
+    if (_password) {
+        dict[kPasswordKey] = _password;
+    }
+
+    return [dict copy];
 }
 
 @end
