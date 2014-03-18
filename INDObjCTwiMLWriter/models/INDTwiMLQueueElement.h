@@ -7,7 +7,11 @@
 //
 
 #import "INDTwiMLElementWithValue.h"
+#import "INDTwiMLConstants.h"
 
 @interface INDTwiMLQueueElement : INDTwiMLElementWithValue
+
+@property (nonatomic) TwiMLHTTPMethod method;
+@property (nonatomic) NSString* url;
 
 @end
