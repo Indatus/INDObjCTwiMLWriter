@@ -16,7 +16,7 @@ static NSString * const kLengthKey = @"length";
     self = [super initWithTagName:kTagName];
 
     if (self) {
-        _pauseLength = 1;
+        _length = 1;
     }
 
     return self;
@@ -25,7 +25,7 @@ static NSString * const kLengthKey = @"length";
 - (NSDictionary*)attributes
 {
     NSMutableDictionary* dict = [NSMutableDictionary new];
-    dict[kLengthKey] = [NSString stringWithFormat:@"%lud", (unsigned long)_pauseLength];
+    dict[kLengthKey] = [NSString stringWithFormat:@"%lud", (unsigned long)_length];
 
     return [dict copy];
 }
