@@ -49,11 +49,12 @@
         [xml appendString:[self attributeString]];
     }
     
-    [xml appendString:@">"];
+    [xml appendString:@">\n"];
     
 
     for (INDTwiMLElement* element in _children) {
         [xml appendString:[element xmlString]];
+        [xml appendString:@"\n"];
     }
     [xml appendFormat:@"</%@>", self.tagName];
 

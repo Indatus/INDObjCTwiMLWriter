@@ -20,6 +20,7 @@ static NSString* const kValueKey = @"kValueKey";
     NSMutableString* xml = [self beginTwiMLDocument];
     for (INDTwiMLElement* element in elements) {
         [xml appendString:[element xmlString]];
+        [xml appendString:@"\n"];
     }
 
     return [self endTwiMLDocument:xml];
