@@ -30,10 +30,7 @@
     NSMutableString* xmlString = [NSMutableString stringWithFormat:@"<%@", tag];
 
     if (attributes) {
-        [attributes enumerateKeysAndObjectsUsingBlock:
-                        ^(NSString* key, NSString* value, BOOL* stop) {
-             [xmlString appendFormat:@" %@='%@'", key, value];
-                        }];
+        [xmlString appendString:[self attributeString]];
     }
     if (value) {
         [xmlString appendFormat:@">%@</%@>", value, tag];
