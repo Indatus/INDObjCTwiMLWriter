@@ -47,9 +47,10 @@
     [xml appendFormat:@"<%@", self.tagName];
     if (self.attributes) {
         [xml appendString:[self attributeString]];
-    } else {
-        [xml appendString:@">"];
     }
+    
+    [xml appendString:@">"];
+    
 
     for (INDTwiMLElement* element in _children) {
         [xml appendString:[element xmlString]];
