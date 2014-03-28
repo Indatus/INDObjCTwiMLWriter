@@ -45,7 +45,7 @@ static NSString* const kMaxParticipantsKey = @"maxParticipants";
         dict[kWaitUrlKey] = _waitUrl;
     }
     dict[kWaitMethodKey] = [self methodString];
-    dict[kMaxParticipantsKey] = [NSString stringWithFormat:@"%lud", (unsigned long)_maxParticipants];
+    dict[kMaxParticipantsKey] = [NSString stringWithFormat:@"%lu", (unsigned long)_maxParticipants];
 
     return [dict copy];
 }

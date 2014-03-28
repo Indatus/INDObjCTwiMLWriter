@@ -28,7 +28,7 @@ static NSString* const kTagName = @"Play";
 - (NSDictionary*)attributes
 {
     NSMutableDictionary* dict = [NSMutableDictionary new];
-    dict[kLoopKey] = [NSString stringWithFormat:@"%lud", (unsigned long)_loop];
+    dict[kLoopKey] = [NSString stringWithFormat:@"%lu", (unsigned long)_loop];
     if (_digits) {
         dict[kDigitsKey] = _digits;
     }

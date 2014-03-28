@@ -34,7 +34,7 @@ static NSString* const kNumDigitsKey = @"numDigits";
     }
 
     if (_numDigits) {
-        dict[kNumDigitsKey] = [NSString stringWithFormat:@"%lud", (unsigned long)_numDigits];
+        dict[kNumDigitsKey] = [NSString stringWithFormat:@"%lu", (unsigned long)_numDigits];
     }
 
     return [dict copy];

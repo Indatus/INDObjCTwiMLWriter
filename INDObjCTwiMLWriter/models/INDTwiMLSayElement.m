@@ -72,7 +72,7 @@ static NSString* const kLangChineseTaewaneseMandarin = @"zh-TW";
 {
     NSMutableDictionary* dict = [NSMutableDictionary new];
     dict[kVoiceKey] = [self voiceString];
-    dict[kLoopKey] = [NSString stringWithFormat:@"%lud", (unsigned long)_loops];
+    dict[kLoopKey] = [NSString stringWithFormat:@"%lu", (unsigned long)_loops];
     dict[kLanguageKey] = [self languageString];
 
     return [dict copy];

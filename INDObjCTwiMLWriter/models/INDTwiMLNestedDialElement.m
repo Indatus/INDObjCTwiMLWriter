@@ -41,9 +41,9 @@ static NSString* const kRecordKey = @"record";
     }
 
     dict[kMethodKey] = [self methodString];
-    dict[kTimeoutKey] = [NSString stringWithFormat:@"%lud", (unsigned long)_timeout];
+    dict[kTimeoutKey] = [NSString stringWithFormat:@"%lu", (unsigned long)_timeout];
     dict[kHangUpOnStarKey] = [self boolToString:_hangupOnStar];
-    dict[kTimeLimitKey] = [NSString stringWithFormat:@"%lud", (unsigned long)_timeLimit];
+    dict[kTimeLimitKey] = [NSString stringWithFormat:@"%lu", (unsigned long)_timeLimit];
 
     if (_callerId) {
         dict[kCallerIdKey] = _callerId;

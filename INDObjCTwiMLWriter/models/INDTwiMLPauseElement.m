@@ -25,7 +25,7 @@ static NSString * const kLengthKey = @"length";
 - (NSDictionary*)attributes
 {
     NSMutableDictionary* dict = [NSMutableDictionary new];
-    dict[kLengthKey] = [NSString stringWithFormat:@"%lud", (unsigned long)_length];
+    dict[kLengthKey] = [NSString stringWithFormat:@"%lu", (unsigned long)_length];
 
     return [dict copy];
 }

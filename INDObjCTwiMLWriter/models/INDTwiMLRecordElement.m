@@ -46,9 +46,9 @@ static NSString* const kTagName = @"Record";
     }
 
     dict[kMethodKey] = [self methodString];
-    dict[kTimeoutKey] = [NSString stringWithFormat:@"%lud", (unsigned long)_timeout];
+    dict[kTimeoutKey] = [NSString stringWithFormat:@"%lu", (unsigned long)_timeout];
     dict[kFinishOnKeyKey] = _finishOnKey;
-    dict[kMaxLengthKey] = [NSString stringWithFormat:@"%lud", (unsigned long)_maxLength];
+    dict[kMaxLengthKey] = [NSString stringWithFormat:@"%lu", (unsigned long)_maxLength];
     dict[kTranscribeKey] = [self transcribeString];
 
     if (_transcribeCallback) {
