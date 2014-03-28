@@ -10,14 +10,9 @@
 
 @implementation INDTwiMLElement
 
--(NSString*)tagName
-{
-    return self.tagName;
-}
-
 - (NSString*)xmlString
 {
-    return nil;
+    return [self xmlStringForTag:self.tagName withAttributes:self.attributes];
 }
 
 - (NSDictionary*)attributes

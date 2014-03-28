@@ -20,6 +20,11 @@
     return self;
 }
 
+- (NSString *)xmlString
+{
+    return [self xmlStringForTag:self.tagName withAttributes:self.attributes andValue:self.value];
+}
+
 - (NSString*)xmlStringForTag:(NSString*)tag withAttributes:(NSDictionary*)attributes andValue:(NSString*)value
 {
     NSMutableString* xmlString = [NSMutableString stringWithFormat:@"<%@", tag];
@@ -30,7 +35,12 @@
              [xmlString appendFormat:@" %@='%@'", key, value];
                         }];
     }
-    [xmlString appendFormat:@">%@<%@/>", value, tag];
+    if (value) {
+        [xmlString appendFormat:@">%@<%@/>", value, tag];
+    }
+    else {
+        [xmlString appendString:@" />"];
+    }
 
     return [xmlString copy];
 }

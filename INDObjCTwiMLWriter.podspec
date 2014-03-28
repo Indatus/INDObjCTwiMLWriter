@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "INDObjCTwiMLWriter"
-  s.version          = "0.0.1"
+  s.version          = "0.0.3"
   s.summary          = "A TwiML generator library in Objective-C."
   s.homepage         = "https://github.com/Indatus/INDObjCTwiMLWriter"
   s.license          = 'MIT'
