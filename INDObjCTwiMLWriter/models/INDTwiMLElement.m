@@ -12,7 +12,7 @@
 
 - (NSString*)xmlString
 {
-    return nil;
+    return [self xmlStringForTag:self.tagName withAttributes:self.attributes];
 }
 
 - (NSDictionary*)attributes

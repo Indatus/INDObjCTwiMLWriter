@@ -20,6 +20,11 @@
     return self;
 }
 
+- (NSString *)xmlString
+{
+    return [self xmlStringForTag:self.tagName withAttributes:self.attributes andValue:self.value];
+}
+
 - (NSString*)xmlStringForTag:(NSString*)tag withAttributes:(NSDictionary*)attributes andValue:(NSString*)value
 {
     NSMutableString* xmlString = [NSMutableString stringWithFormat:@"<%@", tag];
