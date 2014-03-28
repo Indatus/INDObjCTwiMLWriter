@@ -35,7 +35,12 @@
              [xmlString appendFormat:@" %@='%@'", key, value];
                         }];
     }
-    [xmlString appendFormat:@">%@<%@/>", value, tag];
+    if (value) {
+        [xmlString appendFormat:@">%@<%@/>", value, tag];
+    }
+    else {
+        [xmlString appendString:@" />"];
+    }
 
     return [xmlString copy];
 }
