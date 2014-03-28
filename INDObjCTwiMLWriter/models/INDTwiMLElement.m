@@ -10,11 +10,6 @@
 
 @implementation INDTwiMLElement
 
--(NSString*)tagName
-{
-    return self.tagName;
-}
-
 - (NSString*)xmlString
 {
     return nil;

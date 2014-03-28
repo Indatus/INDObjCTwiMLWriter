@@ -10,7 +10,6 @@
 
 @interface INDTwiMLElement : INDTwiMLBaseElement
 
-- (NSString *)tagName;
 - (NSString*)xmlString;
 - (NSDictionary*)attributes;
 - (NSString*)attributeString;
