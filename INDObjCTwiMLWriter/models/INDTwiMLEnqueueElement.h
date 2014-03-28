@@ -11,7 +11,9 @@
 
 @interface INDTwiMLEnqueueElement : INDTwiMLElementWithValue
 
+@property (nonatomic) NSString* action;
 @property (nonatomic) TwiMLHTTPMethod method;
-@property (nonatomic) NSString* url;
+@property (nonatomic) NSString* waitUrl;
+@property (nonatomic) TwiMLHTTPMethod waitUrlMethod;
 
 @end

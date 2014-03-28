@@ -10,4 +10,6 @@
 
 @interface INDTwiMLSipElement : INDTwiMLElementWithValue
 
+@property (nonatomic) NSString* username;
+@property (nonatomic) NSString* password;
 @end

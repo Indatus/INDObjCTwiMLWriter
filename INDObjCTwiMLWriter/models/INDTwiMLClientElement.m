@@ -10,6 +10,9 @@
 
 static NSString* const kTagName = @"Client";
 
+static NSString* const kUrlKey = @"url";
+static NSString* const kMethodKey = @"method";
+
 @implementation INDTwiMLClientElement
 
 - (instancetype)init
@@ -22,4 +25,27 @@ static NSString* const kTagName = @"Client";
     return self;
 }
 
+- (NSDictionary*)attributes
+{
+    NSMutableDictionary* dict = [NSMutableDictionary new];
+    if (_url) {
+        dict[kUrlKey] = _url;
+    }
+    dict[kMethodKey] = [self methodString:_method];
+
+    return [dict copy];
+}
+
+#pragma mark - Private
+- (NSString*)methodString:(TwiMLHTTPMethod)method
+{
+    switch (method) {
+    case TwiMLHTTPMethodPOST:
+        return @"POST";
+        break;
+    case TwiMLHTTPMethodGET:
+        return @"GET";
+        break;
+    }
+}
 @end
