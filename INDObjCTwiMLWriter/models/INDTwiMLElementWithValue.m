@@ -36,7 +36,7 @@
                         }];
     }
     if (value) {
-        [xmlString appendFormat:@">%@<%@/>", value, tag];
+        [xmlString appendFormat:@">%@</%@>", value, tag];
     }
     else {
         [xmlString appendString:@" />"];
